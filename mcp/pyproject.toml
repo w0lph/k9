@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "MCP server giving agents dog-specific aging tools: HAGR (AnAge/DrugAge/GenAge) dog rows, dog orthologs of aging genes via Ensembl, FDA Km dose translation, Dog Aging Project codebooks, NIH RePORTER grants, and search over the canine aging literature corpus."
 readme = "README.md"
 requires-python = ">=3.12"
-license = { text = "MIT" }
+license = "MIT"
 license-files = ["LICENSE"]
 keywords = ["mcp", "model-context-protocol", "dogs", "aging", "geroscience", "longevity", "veterinary"]
 classifiers = [
