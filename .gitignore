@@ -27,3 +27,6 @@ upstream/
 *Recovery-Codes*
 *.pem
 *.key
+
+# uv lockfile created when running the extension bundle locally
+mcp/mcpb/uv.lock
