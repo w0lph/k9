@@ -1,0 +1,61 @@
+{
+  "manifest_version": "0.4",
+  "name": "dog-geroscience-mcp",
+  "display_name": "Dog Geroscience",
+  "version": "0.1.0",
+  "description": "Dog-specific aging research tools: HAGR dog rows, dog orthologs, FDA dose translation, Dog Aging Project codebooks, FDA FOI summaries, canine aging literature.",
+  "long_description": "Gives Claude the aging-research tools that exist only for companion dogs: the dog rows of AnAge, DrugAge and GenAge; dog orthologs of aging genes via Ensembl; FDA body-surface-area dose translation between species; the Dog Aging Project's public survey codebooks; BM25 search over 3,500+ canine aging papers; FDA Center for Veterinary Medicine FOI summaries for 497 dog products with quote-grounded pharmacokinetic and target-animal-safety data; and an intervention_dossier tool that composes all of it for one compound. The server installs from PyPI through uv and downloads its prebuilt database (about 90 MB) from the Hugging Face Hub on first run. Only three tools make live calls (Ensembl, NIH RePORTER, openFDA).",
+  "author": {
+    "name": "w0lph",
+    "url": "https://github.com/w0lph"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/w0lph/k9.git"
+  },
+  "homepage": "https://github.com/w0lph/k9/tree/main/mcp",
+  "documentation": "https://github.com/w0lph/k9/blob/main/mcp/README.md",
+  "support": "https://github.com/w0lph/k9/issues",
+  "license": "MIT",
+  "keywords": [
+    "dogs",
+    "aging",
+    "geroscience",
+    "longevity",
+    "veterinary",
+    "bioinformatics"
+  ],
+  "server": {
+    "type": "uv",
+    "entry_point": "src/server.py",
+    "mcp_config": {
+      "command": "uv",
+      "args": ["run", "--project", "${__dirname}", "python", "${__dirname}/src/server.py"]
+    }
+  },
+  "tools": [
+    { "name": "intervention_dossier", "description": "One evidence package per compound: DrugAge across species with ITP flag, dog-equivalent doses, corpus hits and dog trials, target ortholog, openFDA dog adverse events, FDA FOI summaries, explicit gaps." },
+    { "name": "corpus_search", "description": "BM25 search over 3,500+ canine aging papers (Europe PMC), with tier, year and open-access filters." },
+    { "name": "corpus_record", "description": "One corpus record by key, PMID, PMCID or DOI, optionally with Markdown full text." },
+    { "name": "corpus_info", "description": "What data the server holds: sources, fetch dates, corpus counts." },
+    { "name": "anage_species", "description": "AnAge longevity record for the dog or any species." },
+    { "name": "drugage_search", "description": "DrugAge lifespan-extension experiments by compound and species, with the NIA ITP flag." },
+    { "name": "drugage_species_summary", "description": "DrugAge experiment and compound counts per species." },
+    { "name": "genage_search", "description": "GenAge human aging genes and model-organism longevity genes." },
+    { "name": "dog_ortholog", "description": "Dog orthologs of a human or mouse gene from Ensembl Compara, with identity and orthology type." },
+    { "name": "dose_translate", "description": "mg/kg dose conversion between species with the FDA Km method." },
+    { "name": "dap_releases", "description": "Dog Aging Project curated-data releases whose codebooks are loaded." },
+    { "name": "dap_codebook_search", "description": "Dog Aging Project survey variables matching a concept." },
+    { "name": "dap_variable", "description": "Full codebook entry for one Dog Aging Project variable." },
+    { "name": "nih_reporter_search", "description": "NIH RePORTER projects matching a phrase, by fiscal year." },
+    { "name": "foi_summary_search", "description": "FDA CVM FOI summaries for dog products by ingredient, product or indication." },
+    { "name": "foi_summary_get", "description": "Parsed section text of one FOI summary (effectiveness, target-animal safety, ...)." },
+    { "name": "foi_structured_search", "description": "Typed, quote-grounded FOI records: dose regimen, PK values, safety findings, adverse reactions." }
+  ],
+  "prompts": [
+    { "name": "dossier_briefing", "description": "Write a six-section evidence briefing on an intervention for dogs from the intervention_dossier tool.", "arguments": ["compound", "target_gene"], "text": "Call intervention_dossier(compound=${arguments.compound}, target_gene=${arguments.target_gene}). Then write a briefing for a scientist planning a canine study with six sections and nothing invented beyond the tool output: 1. what is known in other species (DrugAge by species, ITP results with PubMed ids); 2. what is known in dogs (corpus hits with PMIDs, randomized or placebo-controlled trials, or an explicit statement that there are none); 3. dosing (every dog-equivalent dose with its source, labelled as an allometric starting point); 4. target conservation (dog ortholog, orthology type, percent identity); 5. veterinary use and safety signals (openFDA dog adverse events, FDA FOI summaries, target-animal-safety findings); 6. evidence gaps (the tool's gaps list plus what a canine trial would need to establish first). Cite identifiers inline and say which live source was unavailable if a tool returned an error block." }
+  ],
+  "compatibility": {
+    "platforms": ["darwin", "win32", "linux"]
+  }
+}

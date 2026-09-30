@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "dog-geroscience": {
+      "command": "uvx",
+      "args": ["dog-geroscience-mcp"]
+    }
+  }
+}

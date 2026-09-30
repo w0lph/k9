@@ -61,6 +61,30 @@ Claude Desktop / Claude Code / Cursor config:
 }
 ```
 
+Claude Desktop, one click: download `dog-geroscience-mcp-<version>.mcpb` from the
+[releases page](https://github.com/w0lph/k9/releases) and open it (Settings → Extensions →
+Install from file). The bundle declares the PyPI package as a `uv`-type extension, so the
+desktop app installs it with its own uv; nothing else to set up. Source of the bundle:
+`mcpb/` (`npx @anthropic-ai/mcpb pack mcpb dist/dog-geroscience-mcp-0.1.0.mcpb`).
+
+Claude Code, as a plugin with a routing skill (needs `uv` on the PATH):
+
+```text
+/plugin marketplace add w0lph/k9
+/plugin install dog-geroscience@k9
+```
+
+Codex CLI:
+
+```bash
+codex mcp add dog-geroscience -- uvx dog-geroscience-mcp
+```
+
+The skill alone, for any agent that reads `SKILL.md` files: copy
+`plugins/dog-geroscience/skills/dog-geroscience/` into your skills directory (for Claude Code,
+`~/.claude/skills/`). It routes dog-aging questions to the right tools and states how to read
+their output (species labels on FOI summaries, allometric doses, verbatim quotes).
+
 Docker (the root `Dockerfile` of the repository bakes the database into the image):
 
 ```bash

@@ -21,8 +21,11 @@ Phase 2 components:
 `.\rebuild.ps1` regenerates everything in dependency order (`-Fresh` re-fetches sources).
 [PUBLISHING.md](PUBLISHING.md) is the step-by-step for the Hugging Face Hub (dataset cards and
 staging script in `publish/`), PyPI and the MCP registry (`mcp/server.json`), and Glama
-(`glama.json`, root `Dockerfile`). Once published, the server installs with
-`uvx dog-geroscience-mcp` and downloads its database on first run. Each directory is its own
+(`glama.json`, root `Dockerfile`). The server installs with
+`uvx dog-geroscience-mcp` (PyPI), as a Claude Desktop extension (`.mcpb` on the releases page),
+or as a Claude Code plugin with a routing skill (`/plugin marketplace add w0lph/k9`, then
+`/plugin install dog-geroscience@k9`; sources in `plugins/`), and downloads its database on
+first run. Each directory is its own
 `uv` project:
 
 ```bash

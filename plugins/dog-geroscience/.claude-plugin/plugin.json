@@ -1,0 +1,13 @@
+{
+  "name": "dog-geroscience",
+  "version": "0.1.0",
+  "description": "Dog-specific aging research tools and a skill that routes questions to them: HAGR dog rows, dog orthologs, FDA dose translation, Dog Aging Project codebooks, FDA FOI summaries with quote-grounded PK and safety data, canine aging literature, intervention dossiers.",
+  "author": {
+    "name": "w0lph",
+    "url": "https://github.com/w0lph"
+  },
+  "homepage": "https://github.com/w0lph/k9/tree/main/mcp",
+  "repository": "https://github.com/w0lph/k9",
+  "license": "MIT",
+  "keywords": ["dogs", "aging", "geroscience", "longevity", "veterinary", "mcp"]
+}

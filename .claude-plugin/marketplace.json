@@ -1,0 +1,23 @@
+{
+  "$schema": "https://code.claude.com/schemas/marketplace.json",
+  "name": "k9",
+  "owner": {
+    "name": "w0lph",
+    "url": "https://github.com/w0lph"
+  },
+  "metadata": {
+    "description": "Tools for aging research in companion dogs: the dog-geroscience-mcp server and its skill."
+  },
+  "plugins": [
+    {
+      "name": "dog-geroscience",
+      "source": "./plugins/dog-geroscience",
+      "description": "Dog-specific aging research tools (HAGR dog rows, dog orthologs, FDA dose translation, Dog Aging Project codebooks, FDA FOI summaries, canine aging literature, intervention dossiers) plus a skill that routes questions to them.",
+      "version": "0.1.0",
+      "homepage": "https://github.com/w0lph/k9/tree/main/mcp",
+      "repository": "https://github.com/w0lph/k9",
+      "license": "MIT",
+      "keywords": ["dogs", "aging", "geroscience", "longevity", "veterinary", "mcp"]
+    }
+  ]
+}

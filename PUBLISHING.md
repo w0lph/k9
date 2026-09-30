@@ -112,6 +112,26 @@ The listing appears at `https://registry.modelcontextprotocol.io/v0/servers?sear
 and is picked up by aggregators (Smithery, PulseMCP, Glama's registry mirror). To release a
 new version: bump the three version fields, `uv publish`, `mcp-publisher publish`.
 
+## 3b. Claude Desktop extension, Claude Code plugin, skill
+
+- `mcp/mcpb/` is the MCPB source (manifest `0.4`, server type `uv`, depends on the PyPI
+  package). Build and attach to a GitHub release:
+
+```bash
+cd mcp && npx @anthropic-ai/mcpb validate mcpb/manifest.json && npx @anthropic-ai/mcpb pack mcpb dist/dog-geroscience-mcp-0.1.0.mcpb
+```
+
+```bash
+gh release create mcp-v0.1.0 mcp/dist/dog-geroscience-mcp-0.1.0.mcpb --title "dog-geroscience-mcp 0.1.0" --notes "Claude Desktop extension bundle (.mcpb) for dog-geroscience-mcp 0.1.0."
+```
+
+  Optional: submit the bundle to Anthropic's extension directory (Claude Desktop → Settings →
+  Extensions → "Submit" link, or the form linked from https://code.claude.com/docs/en/plugins/publish).
+- The Claude Code plugin lives at `plugins/dog-geroscience/` with the marketplace file at
+  `.claude-plugin/marketplace.json`; users run `/plugin marketplace add w0lph/k9`. Validate with
+  `claude plugin validate plugins/dog-geroscience` and `claude plugin validate .` after edits.
+  Bump `version` in `plugin.json` and the marketplace entry to push an update to users.
+
 ## 4. Glama
 
 Glama lists open-source servers from GitHub and requires the maintainer to sign in with

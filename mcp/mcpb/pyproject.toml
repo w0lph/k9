@@ -1,0 +1,11 @@
+[project]
+name = "dog-geroscience-mcp-bundle"
+version = "0.1.0"
+description = "Claude Desktop extension bundle for dog-geroscience-mcp: installs the PyPI package and runs it over stdio."
+requires-python = ">=3.12"
+dependencies = [
+    "dog-geroscience-mcp>=0.1.0",
+]
+
+[tool.uv]
+package = false
