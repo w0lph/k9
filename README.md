@@ -18,6 +18,8 @@ Phase 2 components:
 | [foi/](foi/README.md) | `foi-summaries`: FDA CVM Freedom of Information summaries as a public-domain dataset (index of 1,726 summaries, 497 dog-product PDFs, text, parsed sections and General Information fields, species flags) plus a typed, quote-validated extraction of all 497 summaries (1,026 PK values, 193 safety studies, 414 effectiveness studies, 918 adverse-reaction rows). | Complete: 497 records, 97% with parsed sections; structured layer covers all 497 (4,510 quotes, 0 errors, 79 explained warnings). |
 | `mcp/` (extended) | `intervention_dossier` (synonym-aware, species-filtered), `foi_summary_search`, `foi_summary_get`, `foi_structured_search`, the `dossier_briefing` prompt; `scripts/dossier_eval.py` coverage table over ITP compounds. | Complete; 23 tests. |
 
+| [docs/](https://w0lph.github.io/k9/) | Static evidence site generated from the database by `mcp/scripts/build_site.py`: one page per NIA ITP compound and veterinary comparator (DrugAge rows, dog-equivalent doses, canine literature, FDA FOI summaries, gaps) and one per FOI ingredient (dose regimen, PK, target-animal safety, effectiveness, adverse reactions, each with its verbatim quote), plus `llms.txt` and a sitemap. No model-written text. | Live at https://w0lph.github.io/k9/ (219 pages); rebuild with `cd mcp && uv run python scripts/build_site.py`. |
+
 `.\rebuild.ps1` regenerates everything in dependency order (`-Fresh` re-fetches sources).
 [PUBLISHING.md](PUBLISHING.md) is the step-by-step for the Hugging Face Hub (dataset cards and
 staging script in `publish/`), PyPI and the MCP registry (`mcp/server.json`), and Glama

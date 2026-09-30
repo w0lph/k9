@@ -1,8 +1,9 @@
 # Publishing guide
 
 Status (2026-09-30): GitHub repository, the four Hugging Face datasets, PyPI
-`dog-geroscience-mcp 0.1.0` and the MCP registry entry `io.github.w0lph/dog-geroscience-mcp`
-are live. Glama submission is the remaining step (section 4).
+`dog-geroscience-mcp 0.1.0`, the MCP registry entry `io.github.w0lph/dog-geroscience-mcp`,
+the Glama listing, the Claude Desktop extension and Claude Code plugin (section 3b) and the
+GitHub Pages evidence site (section 4b) are live.
 
 Three targets, in dependency order: the **Hugging Face Hub** hosts the datasets and the
 prebuilt database the server downloads on first run; **PyPI** plus the **MCP registry** make
@@ -150,6 +151,23 @@ Local check when Docker Desktop is running:
 ```bash
 docker build -t dog-geroscience-mcp . && docker run -i --rm dog-geroscience-mcp
 ```
+
+## 4b. Evidence site (GitHub Pages)
+
+`docs/` is generated, never edited by hand: `mcp/scripts/build_site.py` renders one page per
+ITP compound and veterinary comparator (from `intervention_dossier`) and one per FDA FOI
+ingredient (from `foi_structured` joined with `foi_dog`), plus `llms.txt`, `sitemap.xml`,
+`robots.txt` and `.nojekyll`. Every value is templated from a database row and printed next
+to its verbatim quote and identifier; the footer and sitemap carry the database build date, so
+a rebuild from the same database is byte-identical.
+
+```bash
+cd mcp && uv run python scripts/build_site.py && git add ../docs && git commit -m "docs: rebuild evidence site"
+```
+
+Pages serves `main:/docs` (enabled once with
+`gh api -X POST repos/w0lph/k9/pages -f build_type=legacy -f "source[branch]=main" -f "source[path]=/docs"`);
+each push to `main` redeploys within a minute or two. Rebuild after every database rebuild.
 
 ## 5. The write-up
 

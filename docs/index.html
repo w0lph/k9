@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canine geroscience evidence</title>
+<meta name="description" content="Source-linked evidence pages on aging research in companion dogs: lifespan interventions, dog-equivalent doses, the canine literature, and FDA veterinary drug reviews.">
+<link rel="canonical" href="https://w0lph.github.io/k9/index.html">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<header><nav>
+<a href="./index.html">Canine geroscience evidence</a> ·
+<a href="./interventions/index.html">Interventions</a> ·
+<a href="./fda-foi/index.html">FDA FOI summaries</a> ·
+<a href="https://github.com/w0lph/k9">Source</a>
+</nav></header>
+<main>
+<h1>Canine geroscience evidence</h1>
+<p class="lede">Companion dogs are the one model in which a lifespan intervention can be read out in years rather than decades, in animals that share our environment and our age-related diseases. This site lays out, page by page and with sources, what the aging-research databases, the canine literature and the FDA's veterinary drug reviews actually hold for dogs. It is generated from a database, not written by a model: every figure sits next to the passage it came from.</p>
+<h2>Sections</h2>
+<ul>
+<li><a href="interventions/index.html">Interventions</a>: for every compound the NIA Interventions Testing Program tested in mice (54) plus veterinary comparators, the dog evidence and the gaps. 0 of 54 have a dog lifespan experiment on record.</li>
+<li><a href="fda-foi/index.html">FDA FOI summaries by ingredient</a>: 160 active ingredients, 497 summaries for dog products, as typed records of dose, pharmacokinetics, target-animal safety, effectiveness and adverse reactions with verbatim quotes. The only public, regulator-reviewed source of canine PK and safety-margin data.</li>
+</ul>
+<h2>Sources and tools</h2>
+<ul>
+<li>Canine aging corpus: 3,565 Europe PMC records, <a href="https://huggingface.co/datasets/w0lph/canine-aging-corpus">dataset</a>.</li>
+<li>FDA CVM FOI summaries for dog products and their structured extraction: <a href="https://huggingface.co/datasets/w0lph/foi-summaries-dog">dataset</a>.</li>
+<li>HAGR AnAge, DrugAge and GenAge (CC BY 3.0), Dog Aging Project codebooks, Ensembl orthologs, FDA Km dose table: bundled in the <a href="https://huggingface.co/datasets/w0lph/dog-geroscience-mcp-data">server database</a>.</li>
+<li>Agent tools: <code>uvx dog-geroscience-mcp</code> (PyPI), Claude Desktop extension and Claude Code plugin in the <a href="https://github.com/w0lph/k9">repository</a>. The pages name the tool call that reproduces them.</li>
+<li>Machine-readable index for language-model crawlers: <a href="llms.txt">llms.txt</a>.</li>
+</ul>
+
+</main>
+<footer>
+<p>Generated from the <a href="https://github.com/w0lph/k9/tree/main/mcp">dog-geroscience-mcp</a> database (built 2026-09-30) with no model-written text: every value is templated from a database row and shown with its verbatim quote and identifier. Data: HAGR AnAge/DrugAge/GenAge (CC BY 3.0); Europe PMC metadata and abstracts (Europe PMC terms); FDA Center for Veterinary Medicine FOI summaries (US Government works, public domain); structured extractions and page text CC BY 4.0. Datasets: <a href="https://huggingface.co/datasets/w0lph/canine-aging-corpus">corpus</a>, <a href="https://huggingface.co/datasets/w0lph/foi-summaries-dog">FOI summaries</a>, <a href="https://huggingface.co/datasets/w0lph/dog-geroscience-mcp-data">database</a>. Install the tools: <code>uvx dog-geroscience-mcp</code>.</p>
+</footer>
+</body>
+</html>

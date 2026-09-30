@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://w0lph.github.io/k9/sitemap.xml

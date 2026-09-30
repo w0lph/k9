@@ -1,0 +1,234 @@
+# Canine geroscience evidence
+
+> Source-linked, model-free evidence pages on aging research in companion dogs, generated from the dog-geroscience-mcp database. Every figure is shown with its verbatim quote and identifier (PMID, foi_id, NADA). Text CC BY 4.0; data per source.
+
+## Sections
+- [Interventions](https://w0lph.github.io/k9/interventions/index.html): the dog evidence for every NIA ITP compound
+- [FDA FOI summaries by ingredient](https://w0lph.github.io/k9/fda-foi/index.html): dose, PK, safety and effectiveness data from FDA CVM reviews of dog products
+
+## Interventions
+- [(R/S)-1,3-butanediol](https://w0lph.github.io/k9/interventions/r-s-1-3-butanediol.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [16-alpha-hydroxyestradiol](https://w0lph.github.io/k9/interventions/16-alpha-hydroxyestradiol.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [17-dimethylaminoethylamino-17-demethoxygeldanamycin hydrochloride](https://w0lph.github.io/k9/interventions/17-dimethylaminoethylamino-17-demethoxygeldanamycin-hydrochloride.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [17‐alpha‐estradiol](https://w0lph.github.io/k9/interventions/17-alpha-estradiol.html): 6 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [2,4-dinitrophenol](https://w0lph.github.io/k9/interventions/2-4-dinitrophenol.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [2-(2-hydroxyphenyl)benzothiazole](https://w0lph.github.io/k9/interventions/2-2-hydroxyphenyl-benzothiazole.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [4-hydroxyphenyl-N-tert-butylnitrone](https://w0lph.github.io/k9/interventions/4-hydroxyphenyl-n-tert-butylnitrone.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [4-phenylbutyrate](https://w0lph.github.io/k9/interventions/4-phenylbutyrate.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Acarbose](https://w0lph.github.io/k9/interventions/acarbose.html): 10 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Alpha-ketoglutarate](https://w0lph.github.io/k9/interventions/alpha-ketoglutarate.html): 2 ITP rows, 0 dog lifespan rows, 1 canine papers, 0 FDA FOI summaries
+- [Aspirin](https://w0lph.github.io/k9/interventions/aspirin.html): 6 ITP rows, 0 dog lifespan rows, 2 canine papers, 0 FDA FOI summaries
+- [Astaxanthin](https://w0lph.github.io/k9/interventions/astaxanthin.html): 2 ITP rows, 0 dog lifespan rows, 6 canine papers, 0 FDA FOI summaries
+- [Beta-guanidinopropionic acid](https://w0lph.github.io/k9/interventions/beta-guanidinopropionic-acid.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Caffeic acid phenethylester](https://w0lph.github.io/k9/interventions/caffeic-acid-phenethylester.html): 4 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Canagliflozin](https://w0lph.github.io/k9/interventions/canagliflozin.html): 6 ITP rows, 0 dog lifespan rows, 2 canine papers, 0 FDA FOI summaries
+- [Candesartan cilexetil](https://w0lph.github.io/k9/interventions/candesartan-cilexetil.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Captopril](https://w0lph.github.io/k9/interventions/captopril.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Curcumin](https://w0lph.github.io/k9/interventions/curcumin.html): 2 ITP rows, 0 dog lifespan rows, 2 canine papers, 0 FDA FOI summaries
+- [Dimethyl fumarate](https://w0lph.github.io/k9/interventions/dimethyl-fumarate.html): 4 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Enalapril](https://w0lph.github.io/k9/interventions/enalapril.html): 2 ITP rows, 0 dog lifespan rows, 1 canine papers, 0 FDA FOI summaries
+- [Fisetin](https://w0lph.github.io/k9/interventions/fisetin.html): 4 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Fish oil](https://w0lph.github.io/k9/interventions/fish-oil.html): 4 ITP rows, 0 dog lifespan rows, 13 canine papers, 0 FDA FOI summaries
+- [Geranylgeranylacetone](https://w0lph.github.io/k9/interventions/geranylgeranylacetone.html): 2 ITP rows, 0 dog lifespan rows, 1 canine papers, 0 FDA FOI summaries
+- [Glycine](https://w0lph.github.io/k9/interventions/glycine.html): 2 ITP rows, 0 dog lifespan rows, 12 canine papers, 0 FDA FOI summaries
+- [Green tea extract](https://w0lph.github.io/k9/interventions/green-tea-extract.html): 2 ITP rows, 0 dog lifespan rows, 1 canine papers, 0 FDA FOI summaries
+- [Hydralazine](https://w0lph.github.io/k9/interventions/hydralazine.html): 4 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [INT-767d (FXR/TGR5 agonist)](https://w0lph.github.io/k9/interventions/int-767d-fxr-tgr5-agonist.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Inulin](https://w0lph.github.io/k9/interventions/inulin.html): 2 ITP rows, 0 dog lifespan rows, 5 canine papers, 0 FDA FOI summaries
+- [Leucine](https://w0lph.github.io/k9/interventions/leucine.html): 2 ITP rows, 0 dog lifespan rows, 11 canine papers, 0 FDA FOI summaries
+- [MIF098 (CD74 antagonist)](https://w0lph.github.io/k9/interventions/mif098-cd74-antagonist.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Meclizine](https://w0lph.github.io/k9/interventions/meclizine.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Medium-chain triglyceride oil](https://w0lph.github.io/k9/interventions/medium-chain-triglyceride-oil.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Metformin](https://w0lph.github.io/k9/interventions/metformin.html): 2 ITP rows, 0 dog lifespan rows, 8 canine papers, 0 FDA FOI summaries
+- [Methylene blue](https://w0lph.github.io/k9/interventions/methylene-blue.html): 2 ITP rows, 0 dog lifespan rows, 1 canine papers, 0 FDA FOI summaries
+- [Minocycline](https://w0lph.github.io/k9/interventions/minocycline.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [MitoQ](https://w0lph.github.io/k9/interventions/mitoq.html): 2 ITP rows, 0 dog lifespan rows, 2 canine papers, 0 FDA FOI summaries
+- [Mycophenolic acid](https://w0lph.github.io/k9/interventions/mycophenolic-acid.html): 2 ITP rows, 0 dog lifespan rows, 2 canine papers, 0 FDA FOI summaries
+- [Nebivolol](https://w0lph.github.io/k9/interventions/nebivolol.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Nicotinamide riboside](https://w0lph.github.io/k9/interventions/nicotinamide-riboside.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Nitroflurbiprofen](https://w0lph.github.io/k9/interventions/nitroflurbiprofen.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Nordihydroguaiaretic acid](https://w0lph.github.io/k9/interventions/nordihydroguaiaretic-acid.html): 6 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Oxaloacetate](https://w0lph.github.io/k9/interventions/oxaloacetate.html): 2 ITP rows, 0 dog lifespan rows, 2 canine papers, 0 FDA FOI summaries
+- [PB125 (carnosol, withaferin A and luteolin)](https://w0lph.github.io/k9/interventions/pb125-carnosol-withaferin-a-and-luteolin.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Protandim](https://w0lph.github.io/k9/interventions/protandim.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Rapamycin](https://w0lph.github.io/k9/interventions/rapamycin.html): 16 ITP rows, 0 dog lifespan rows, 152 canine papers, 0 FDA FOI summaries
+- [Resveratrol](https://w0lph.github.io/k9/interventions/resveratrol.html): 6 ITP rows, 0 dog lifespan rows, 3 canine papers, 0 FDA FOI summaries
+- [SG1002 (hydrogen sulfide donor)](https://w0lph.github.io/k9/interventions/sg1002-hydrogen-sulfide-donor.html): 4 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Simvastatin](https://w0lph.github.io/k9/interventions/simvastatin.html): 4 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Sodium thiosulfate](https://w0lph.github.io/k9/interventions/sodium-thiosulfate.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Sulindac](https://w0lph.github.io/k9/interventions/sulindac.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Syringaresinol](https://w0lph.github.io/k9/interventions/syringaresinol.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [TM5441 (PAI-1 inhibitor)](https://w0lph.github.io/k9/interventions/tm5441-pai-1-inhibitor.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Ursodeoxycholic acid](https://w0lph.github.io/k9/interventions/ursodeoxycholic-acid.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
+- [Ursolic  acid](https://w0lph.github.io/k9/interventions/ursolic-acid.html): 2 ITP rows, 0 dog lifespan rows, 1 canine papers, 0 FDA FOI summaries
+- [selegiline](https://w0lph.github.io/k9/interventions/selegiline.html): 0 ITP rows, 1 dog lifespan rows, 19 canine papers, 2 FDA FOI summaries
+- [carprofen](https://w0lph.github.io/k9/interventions/carprofen.html): 0 ITP rows, 0 dog lifespan rows, 1 canine papers, 11 FDA FOI summaries
+
+## FDA FOI summaries by ingredient
+- [(S)-Methoprene](https://w0lph.github.io/k9/fda-foi/s-methoprene.html): 1 summaries, 0 PK values, 4 adverse-reaction rows
+- [Acepromazine Maleate](https://w0lph.github.io/k9/fda-foi/acepromazine-maleate.html): 3 summaries, 6 PK values, 1 adverse-reaction rows
+- [Afoxolaner](https://w0lph.github.io/k9/fda-foi/afoxolaner.html): 7 summaries, 6 PK values, 19 adverse-reaction rows
+- [Afoxolaner, Moxidectin, Pyrantel Pamoate](https://w0lph.github.io/k9/fda-foi/afoxolaner-moxidectin-pyrantel-pamoate.html): 4 summaries, 0 PK values, 10 adverse-reaction rows
+- [Alfaxalone](https://w0lph.github.io/k9/fda-foi/alfaxalone.html): 3 summaries, 8 PK values, 8 adverse-reaction rows
+- [Amikacin Sulfate](https://w0lph.github.io/k9/fda-foi/amikacin-sulfate.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [Amoxicillin Trihydrate, Clavulanate Potassium](https://w0lph.github.io/k9/fda-foi/amoxicillin-trihydrate-clavulanate-potassium.html): 9 summaries, 46 PK values, 0 adverse-reaction rows
+- [Amoxicillin, Clavulanate Potassium](https://w0lph.github.io/k9/fda-foi/amoxicillin-clavulanate-potassium.html): 1 summaries, 8 PK values, 0 adverse-reaction rows
+- [Ampicillin Trihydrate](https://w0lph.github.io/k9/fda-foi/ampicillin-trihydrate.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [Atinvicitinib](https://w0lph.github.io/k9/fda-foi/atinvicitinib.html): 1 summaries, 8 PK values, 6 adverse-reaction rows
+- [Atipamezole Hydrochloride](https://w0lph.github.io/k9/fda-foi/atipamezole-hydrochloride.html): 6 summaries, 3 PK values, 2 adverse-reaction rows
+- [Attapulgite, Bismuth Subcarbonate, Kanamycin Sulfate](https://w0lph.github.io/k9/fda-foi/attapulgite-bismuth-subcarbonate-kanamycin-sulfate.html): 1 summaries, 0 PK values, 1 adverse-reaction rows
+- [Bacitracin Zinc, Neomycin Sulfate, Polymyxin B Sulfate](https://w0lph.github.io/k9/fda-foi/bacitracin-zinc-neomycin-sulfate-polymyxin-b-sulfate.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [Bedinvetmab](https://w0lph.github.io/k9/fda-foi/bedinvetmab.html): 1 summaries, 4 PK values, 6 adverse-reaction rows
+- [Betamethasone Acetate, Florfenicol, Terbinafine](https://w0lph.github.io/k9/fda-foi/betamethasone-acetate-florfenicol-terbinafine.html): 1 summaries, 0 PK values, 5 adverse-reaction rows
+- [Betamethasone Acetate, Gentamicin Sulfate](https://w0lph.github.io/k9/fda-foi/betamethasone-acetate-gentamicin-sulfate.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [Betamethasone Acetate, Terbinafine](https://w0lph.github.io/k9/fda-foi/betamethasone-acetate-terbinafine.html): 1 summaries, 0 PK values, 5 adverse-reaction rows
+- [Betamethasone Valerate, Clotrimazole, Gentamicin Sulfate](https://w0lph.github.io/k9/fda-foi/betamethasone-valerate-clotrimazole-gentamicin-sulfate.html): 7 summaries, 0 PK values, 1 adverse-reaction rows
+- [Betamethasone Valerate, Gentamicin Sulfate](https://w0lph.github.io/k9/fda-foi/betamethasone-valerate-gentamicin-sulfate.html): 5 summaries, 0 PK values, 0 adverse-reaction rows
+- [Bupivacaine](https://w0lph.github.io/k9/fda-foi/bupivacaine.html): 2 summaries, 8 PK values, 12 adverse-reaction rows
+- [Capromorelin](https://w0lph.github.io/k9/fda-foi/capromorelin.html): 1 summaries, 5 PK values, 6 adverse-reaction rows
+- [Carprofen](https://w0lph.github.io/k9/fda-foi/carprofen.html): 30 summaries, 87 PK values, 32 adverse-reaction rows
+- [Cefadroxil](https://w0lph.github.io/k9/fda-foi/cefadroxil.html): 1 summaries, 8 PK values, 3 adverse-reaction rows
+- [Cefovecin sodium](https://w0lph.github.io/k9/fda-foi/cefovecin-sodium.html): 2 summaries, 8 PK values, 6 adverse-reaction rows
+- [Cefpodoxime proxetil](https://w0lph.github.io/k9/fda-foi/cefpodoxime-proxetil.html): 4 summaries, 22 PK values, 6 adverse-reaction rows
+- [Ceftiofur Sodium](https://w0lph.github.io/k9/fda-foi/ceftiofur-sodium.html): 16 summaries, 27 PK values, 8 adverse-reaction rows
+- [Cephalexin](https://w0lph.github.io/k9/fda-foi/cephalexin.html): 1 summaries, 8 PK values, 6 adverse-reaction rows
+- [Chlorhexidine Acetate](https://w0lph.github.io/k9/fda-foi/chlorhexidine-acetate.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [Chloroquine Phosphate, Embutramide, Lidocaine](https://w0lph.github.io/k9/fda-foi/chloroquine-phosphate-embutramide-lidocaine.html): 1 summaries, 0 PK values, 6 adverse-reaction rows
+- [Clindamycin](https://w0lph.github.io/k9/fda-foi/clindamycin.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [Clindamycin Hydrochloride](https://w0lph.github.io/k9/fda-foi/clindamycin-hydrochloride.html): 14 summaries, 18 PK values, 2 adverse-reaction rows
+- [Clomipramine Hydrochloride](https://w0lph.github.io/k9/fda-foi/clomipramine-hydrochloride.html): 4 summaries, 10 PK values, 6 adverse-reaction rows
+- [Clotrimazole, Gentamicin Sulfate, Mometasone furoate](https://w0lph.github.io/k9/fda-foi/clotrimazole-gentamicin-sulfate-mometasone-furoate.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [Clotrimazole, Gentamicin Sulfate, Mometasone Furoate Monohydrate](https://w0lph.github.io/k9/fda-foi/clotrimazole-gentamicin-sulfate-mometasone-furoate-monohydrate.html): 3 summaries, 1 PK values, 6 adverse-reaction rows
+- [Corticotropin](https://w0lph.github.io/k9/fda-foi/corticotropin.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [Cosyntropin](https://w0lph.github.io/k9/fda-foi/cosyntropin.html): 1 summaries, 0 PK values, 3 adverse-reaction rows
+- [Crofelemer](https://w0lph.github.io/k9/fda-foi/crofelemer.html): 1 summaries, 3 PK values, 6 adverse-reaction rows
+- [Cyclosporine](https://w0lph.github.io/k9/fda-foi/cyclosporine.html): 5 summaries, 8 PK values, 9 adverse-reaction rows
+- [Cythioate](https://w0lph.github.io/k9/fda-foi/cythioate.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [Deracoxib](https://w0lph.github.io/k9/fda-foi/deracoxib.html): 7 summaries, 9 PK values, 19 adverse-reaction rows
+- [Desoxycorticosterone Pivalate](https://w0lph.github.io/k9/fda-foi/desoxycorticosterone-pivalate.html): 2 summaries, 7 PK values, 12 adverse-reaction rows
+- [Dexamethasone](https://w0lph.github.io/k9/fda-foi/dexamethasone.html): 2 summaries, 0 PK values, 0 adverse-reaction rows
+- [Dexamethasone, Marbofloxacin, Terbinafine](https://w0lph.github.io/k9/fda-foi/dexamethasone-marbofloxacin-terbinafine.html): 1 summaries, 1 PK values, 4 adverse-reaction rows
+- [Dexamethasone, Neomycin Sulfate, Thiabendazole](https://w0lph.github.io/k9/fda-foi/dexamethasone-neomycin-sulfate-thiabendazole.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [Dexmedetomidine](https://w0lph.github.io/k9/fda-foi/dexmedetomidine.html): 1 summaries, 2 PK values, 5 adverse-reaction rows
+- [Dexmedetomidine hydrochloride](https://w0lph.github.io/k9/fda-foi/dexmedetomidine-hydrochloride.html): 8 summaries, 0 PK values, 18 adverse-reaction rows
+- [Diazepam](https://w0lph.github.io/k9/fda-foi/diazepam.html): 1 summaries, 0 PK values, 1 adverse-reaction rows
+- [Dichlorvos](https://w0lph.github.io/k9/fda-foi/dichlorvos.html): 1 summaries, 0 PK values, 1 adverse-reaction rows
+- [Diethylcarbamazine Citrate, Oxibendazole](https://w0lph.github.io/k9/fda-foi/diethylcarbamazine-citrate-oxibendazole.html): 1 summaries, 0 PK values, 1 adverse-reaction rows
+- [Difloxacin Hydrochloride](https://w0lph.github.io/k9/fda-foi/difloxacin-hydrochloride.html): 1 summaries, 8 PK values, 1 adverse-reaction rows
+- [Dirlotapide](https://w0lph.github.io/k9/fda-foi/dirlotapide.html): 1 summaries, 5 PK values, 6 adverse-reaction rows
+- [Doxapram Hydrochloride](https://w0lph.github.io/k9/fda-foi/doxapram-hydrochloride.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [Doxycycline Hyclate](https://w0lph.github.io/k9/fda-foi/doxycycline-hyclate.html): 1 summaries, 3 PK values, 1 adverse-reaction rows
+- [Enrofloxacin](https://w0lph.github.io/k9/fda-foi/enrofloxacin.html): 21 summaries, 80 PK values, 19 adverse-reaction rows
+- [Enrofloxacin, Silver sulfadiazine](https://w0lph.github.io/k9/fda-foi/enrofloxacin-silver-sulfadiazine.html): 2 summaries, 0 PK values, 1 adverse-reaction rows
+- [Epsiprantel](https://w0lph.github.io/k9/fda-foi/epsiprantel.html): 1 summaries, 0 PK values, 2 adverse-reaction rows
+- [Erythromycin](https://w0lph.github.io/k9/fda-foi/erythromycin.html): 1 summaries, 1 PK values, 1 adverse-reaction rows
+- [estriol](https://w0lph.github.io/k9/fda-foi/estriol.html): 1 summaries, 8 PK values, 6 adverse-reaction rows
+- [Etodolac](https://w0lph.github.io/k9/fda-foi/etodolac.html): 3 summaries, 16 PK values, 8 adverse-reaction rows
+- [Febantel](https://w0lph.github.io/k9/fda-foi/febantel.html): 1 summaries, 0 PK values, 2 adverse-reaction rows
+- [Febantel, Praziquantel](https://w0lph.github.io/k9/fda-foi/febantel-praziquantel.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [Febantel, Praziquantel, Pyrantel Pamoate](https://w0lph.github.io/k9/fda-foi/febantel-praziquantel-pyrantel-pamoate.html): 4 summaries, 0 PK values, 6 adverse-reaction rows
+- [Fenbendazole](https://w0lph.github.io/k9/fda-foi/fenbendazole.html): 2 summaries, 0 PK values, 2 adverse-reaction rows
+- [Fenbendazole, Ivermectin, Praziquantel](https://w0lph.github.io/k9/fda-foi/fenbendazole-ivermectin-praziquantel.html): 1 summaries, 0 PK values, 6 adverse-reaction rows
+- [Fentanyl](https://w0lph.github.io/k9/fda-foi/fentanyl.html): 1 summaries, 6 PK values, 6 adverse-reaction rows
+- [firocoxib](https://w0lph.github.io/k9/fda-foi/firocoxib.html): 8 summaries, 19 PK values, 20 adverse-reaction rows
+- [Florfenicol, Mometasone furoate, Terbinafine](https://w0lph.github.io/k9/fda-foi/florfenicol-mometasone-furoate-terbinafine.html): 4 summaries, 0 PK values, 6 adverse-reaction rows
+- [Flumethasone](https://w0lph.github.io/k9/fda-foi/flumethasone.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [Fluoxetine hydrochloride](https://w0lph.github.io/k9/fda-foi/fluoxetine-hydrochloride.html): 1 summaries, 10 PK values, 6 adverse-reaction rows
+- [Fluralaner](https://w0lph.github.io/k9/fda-foi/fluralaner.html): 9 summaries, 18 PK values, 28 adverse-reaction rows
+- [Fomepizole](https://w0lph.github.io/k9/fda-foi/fomepizole.html): 1 summaries, 4 PK values, 1 adverse-reaction rows
+- [Furosemide](https://w0lph.github.io/k9/fda-foi/furosemide.html): 4 summaries, 6 PK values, 1 adverse-reaction rows
+- [Fuzapladib sodium](https://w0lph.github.io/k9/fda-foi/fuzapladib-sodium.html): 1 summaries, 7 PK values, 6 adverse-reaction rows
+- [Gentamicin Sulfate](https://w0lph.github.io/k9/fda-foi/gentamicin-sulfate.html): 2 summaries, 0 PK values, 0 adverse-reaction rows
+- [Gentamicin Sulfate, Hydrocortisone aceponate, Miconazole Nitrate](https://w0lph.github.io/k9/fda-foi/gentamicin-sulfate-hydrocortisone-aceponate-miconazole-nitrate.html): 1 summaries, 2 PK values, 1 adverse-reaction rows
+- [Gentamicin, Mometasone furoate, posaconazole](https://w0lph.github.io/k9/fda-foi/gentamicin-mometasone-furoate-posaconazole.html): 1 summaries, 0 PK values, 5 adverse-reaction rows
+- [Glycopyrrolate](https://w0lph.github.io/k9/fda-foi/glycopyrrolate.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [Grapiprant](https://w0lph.github.io/k9/fda-foi/grapiprant.html): 1 summaries, 8 PK values, 6 adverse-reaction rows
+- [Halothane](https://w0lph.github.io/k9/fda-foi/halothane.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [Hemoglobin Glutamer-200 (bovine)](https://w0lph.github.io/k9/fda-foi/hemoglobin-glutamer-200-bovine.html): 2 summaries, 3 PK values, 6 adverse-reaction rows
+- [Ilunocitinib](https://w0lph.github.io/k9/fda-foi/ilunocitinib.html): 2 summaries, 8 PK values, 6 adverse-reaction rows
+- [Imepitoin](https://w0lph.github.io/k9/fda-foi/imepitoin.html): 1 summaries, 9 PK values, 6 adverse-reaction rows
+- [Imidacloprid](https://w0lph.github.io/k9/fda-foi/imidacloprid.html): 1 summaries, 0 PK values, 5 adverse-reaction rows
+- [Imidacloprid, Ivermectin](https://w0lph.github.io/k9/fda-foi/imidacloprid-ivermectin.html): 1 summaries, 0 PK values, 6 adverse-reaction rows
+- [Imidacloprid, Moxidectin](https://w0lph.github.io/k9/fda-foi/imidacloprid-moxidectin.html): 7 summaries, 7 PK values, 12 adverse-reaction rows
+- [Imidocarb Dipropionate](https://w0lph.github.io/k9/fda-foi/imidocarb-dipropionate.html): 1 summaries, 0 PK values, 5 adverse-reaction rows
+- [Insulin (protamine zinc recombinant human insulin)](https://w0lph.github.io/k9/fda-foi/insulin-protamine-zinc-recombinant-human-insulin.html): 2 summaries, 8 PK values, 12 adverse-reaction rows
+- [Isoflurane](https://w0lph.github.io/k9/fda-foi/isoflurane.html): 6 summaries, 0 PK values, 0 adverse-reaction rows
+- [Ivermectin](https://w0lph.github.io/k9/fda-foi/ivermectin.html): 9 summaries, 4 PK values, 7 adverse-reaction rows
+- [Ivermectin, Praziquantel, Pyrantel Pamoate](https://w0lph.github.io/k9/fda-foi/ivermectin-praziquantel-pyrantel-pamoate.html): 3 summaries, 8 PK values, 7 adverse-reaction rows
+- [Ivermectin, Pyrantel Pamoate](https://w0lph.github.io/k9/fda-foi/ivermectin-pyrantel-pamoate.html): 4 summaries, 4 PK values, 4 adverse-reaction rows
+- [Levothyroxine sodium](https://w0lph.github.io/k9/fda-foi/levothyroxine-sodium.html): 2 summaries, 9 PK values, 12 adverse-reaction rows
+- [Lincomycin Hydrochloride Monohydrate](https://w0lph.github.io/k9/fda-foi/lincomycin-hydrochloride-monohydrate.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [Lotilaner](https://w0lph.github.io/k9/fda-foi/lotilaner.html): 3 summaries, 6 PK values, 9 adverse-reaction rows
+- [Lotilaner, Moxidectin, Praziquantel, Pyrantel Pamoate](https://w0lph.github.io/k9/fda-foi/lotilaner-moxidectin-praziquantel-pyrantel-pamoate.html): 4 summaries, 8 PK values, 15 adverse-reaction rows
+- [Lufenuron](https://w0lph.github.io/k9/fda-foi/lufenuron.html): 5 summaries, 2 PK values, 5 adverse-reaction rows
+- [Lufenuron, Milbemycin Oxime](https://w0lph.github.io/k9/fda-foi/lufenuron-milbemycin-oxime.html): 3 summaries, 0 PK values, 6 adverse-reaction rows
+- [Lufenuron, Milbemycin Oxime, Nitenpyram](https://w0lph.github.io/k9/fda-foi/lufenuron-milbemycin-oxime-nitenpyram.html): 1 summaries, 0 PK values, 3 adverse-reaction rows
+- [Lufenuron, Milbemycin Oxime, Praziquantel](https://w0lph.github.io/k9/fda-foi/lufenuron-milbemycin-oxime-praziquantel.html): 2 summaries, 4 PK values, 7 adverse-reaction rows
+- [Lufenuron, Nitenpyram](https://w0lph.github.io/k9/fda-foi/lufenuron-nitenpyram.html): 1 summaries, 0 PK values, 5 adverse-reaction rows
+- [Marbofloxacin](https://w0lph.github.io/k9/fda-foi/marbofloxacin.html): 5 summaries, 31 PK values, 13 adverse-reaction rows
+- [Maropitant](https://w0lph.github.io/k9/fda-foi/maropitant.html): 5 summaries, 9 PK values, 12 adverse-reaction rows
+- [Maropitant citrate](https://w0lph.github.io/k9/fda-foi/maropitant-citrate.html): 5 summaries, 23 PK values, 9 adverse-reaction rows
+- [Medetomidine hydrochloride](https://w0lph.github.io/k9/fda-foi/medetomidine-hydrochloride.html): 2 summaries, 0 PK values, 3 adverse-reaction rows
+- [Medetomidine hydrochloride and vatinoxan hydrochloride](https://w0lph.github.io/k9/fda-foi/medetomidine-hydrochloride-and-vatinoxan-hydrochloride.html): 1 summaries, 5 PK values, 6 adverse-reaction rows
+- [Melarsomine dihydrochloride](https://w0lph.github.io/k9/fda-foi/melarsomine-dihydrochloride.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [meloxicam](https://w0lph.github.io/k9/fda-foi/meloxicam.html): 17 summaries, 58 PK values, 21 adverse-reaction rows
+- [Metronidazole](https://w0lph.github.io/k9/fda-foi/metronidazole.html): 1 summaries, 0 PK values, 6 adverse-reaction rows
+- [Miconazole Nitrate](https://w0lph.github.io/k9/fda-foi/miconazole-nitrate.html): 2 summaries, 0 PK values, 0 adverse-reaction rows
+- [Miconazole Nitrate, Polymyxin B Sulfate, Prednisolone Acetate](https://w0lph.github.io/k9/fda-foi/miconazole-nitrate-polymyxin-b-sulfate-prednisolone-acetate.html): 1 summaries, 0 PK values, 6 adverse-reaction rows
+- [Milbemycin Oxime](https://w0lph.github.io/k9/fda-foi/milbemycin-oxime.html): 7 summaries, 8 PK values, 11 adverse-reaction rows
+- [Milbemycin oxime/praziquantel](https://w0lph.github.io/k9/fda-foi/milbemycin-oxime-praziquantel.html): 2 summaries, 4 PK values, 2 adverse-reaction rows
+- [Moxidectin](https://w0lph.github.io/k9/fda-foi/moxidectin.html): 6 summaries, 9 PK values, 13 adverse-reaction rows
+- [Mupirocin](https://w0lph.github.io/k9/fda-foi/mupirocin.html): 4 summaries, 0 PK values, 0 adverse-reaction rows
+- [Neomycin Sulfate, Nystatin, Thiostrepton, Triamcinolone Acetonide](https://w0lph.github.io/k9/fda-foi/neomycin-sulfate-nystatin-thiostrepton-triamcinolone-acetonide.html): 5 summaries, 0 PK values, 0 adverse-reaction rows
+- [Nitenpyram](https://w0lph.github.io/k9/fda-foi/nitenpyram.html): 3 summaries, 14 PK values, 1 adverse-reaction rows
+- [Nitrofurazone](https://w0lph.github.io/k9/fda-foi/nitrofurazone.html): 3 summaries, 0 PK values, 0 adverse-reaction rows
+- [Oclacitinib](https://w0lph.github.io/k9/fda-foi/oclacitinib.html): 2 summaries, 16 PK values, 9 adverse-reaction rows
+- [Orbifloxacin](https://w0lph.github.io/k9/fda-foi/orbifloxacin.html): 4 summaries, 23 PK values, 5 adverse-reaction rows
+- [Orbifloxacin, mometasone furoate monohydrate and posaconazole](https://w0lph.github.io/k9/fda-foi/orbifloxacin-mometasone-furoate-monohydrate-and-posaconazole.html): 1 summaries, 1 PK values, 1 adverse-reaction rows
+- [Ormetoprim, Sulfadimethoxine](https://w0lph.github.io/k9/fda-foi/ormetoprim-sulfadimethoxine.html): 2 summaries, 2 PK values, 3 adverse-reaction rows
+- [Pentobarbital Sodium, Phenytoin Sodium](https://w0lph.github.io/k9/fda-foi/pentobarbital-sodium-phenytoin-sodium.html): 3 summaries, 0 PK values, 0 adverse-reaction rows
+- [Phenobarbital](https://w0lph.github.io/k9/fda-foi/phenobarbital.html): 1 summaries, 2 PK values, 3 adverse-reaction rows
+- [Phenylbutazone](https://w0lph.github.io/k9/fda-foi/phenylbutazone.html): 1 summaries, 0 PK values, 0 adverse-reaction rows
+- [Phenylpropanolamine hydrochloride](https://w0lph.github.io/k9/fda-foi/phenylpropanolamine-hydrochloride.html): 3 summaries, 9 PK values, 13 adverse-reaction rows
+- [Pimobendan](https://w0lph.github.io/k9/fda-foi/pimobendan.html): 6 summaries, 17 PK values, 15 adverse-reaction rows
+- [Polysulfated Glycosaminoglycan](https://w0lph.github.io/k9/fda-foi/polysulfated-glycosaminoglycan.html): 1 summaries, 4 PK values, 3 adverse-reaction rows
+- [Porcine insulin zinc suspension](https://w0lph.github.io/k9/fda-foi/porcine-insulin-zinc-suspension.html): 4 summaries, 10 PK values, 18 adverse-reaction rows
+- [Potassium bromide](https://w0lph.github.io/k9/fda-foi/potassium-bromide.html): 2 summaries, 6 PK values, 10 adverse-reaction rows
+- [Praziquantel](https://w0lph.github.io/k9/fda-foi/praziquantel.html): 9 summaries, 8 PK values, 4 adverse-reaction rows
+- [Prednisolone](https://w0lph.github.io/k9/fda-foi/prednisolone.html): 2 summaries, 7 PK values, 1 adverse-reaction rows
+- [Prednisolone, Trimeprazine Tartrate](https://w0lph.github.io/k9/fda-foi/prednisolone-trimeprazine-tartrate.html): 1 summaries, 8 PK values, 1 adverse-reaction rows
+- [Pregabalin](https://w0lph.github.io/k9/fda-foi/pregabalin.html): 1 summaries, 1 PK values, 2 adverse-reaction rows
+- [Propofol](https://w0lph.github.io/k9/fda-foi/propofol.html): 6 summaries, 27 PK values, 30 adverse-reaction rows
+- [Pyrantel Pamoate](https://w0lph.github.io/k9/fda-foi/pyrantel-pamoate.html): 10 summaries, 2 PK values, 5 adverse-reaction rows
+- [Pyrantel pamoate / Praziquantel](https://w0lph.github.io/k9/fda-foi/pyrantel-pamoate-praziquantel.html): 1 summaries, 0 PK values, 6 adverse-reaction rows
+- [Rabacfosadine](https://w0lph.github.io/k9/fda-foi/rabacfosadine.html): 1 summaries, 4 PK values, 6 adverse-reaction rows
+- [robenacoxib](https://w0lph.github.io/k9/fda-foi/robenacoxib.html): 4 summaries, 13 PK values, 16 adverse-reaction rows
+- [Ropinirole](https://w0lph.github.io/k9/fda-foi/ropinirole.html): 1 summaries, 0 PK values, 6 adverse-reaction rows
+- [Sarolaner](https://w0lph.github.io/k9/fda-foi/sarolaner.html): 4 summaries, 1 PK values, 5 adverse-reaction rows
+- [Sarolaner, moxidectin, and pyrantel (as pamoate salt)](https://w0lph.github.io/k9/fda-foi/sarolaner-moxidectin-and-pyrantel-as-pamoate-salt.html): 1 summaries, 8 PK values, 6 adverse-reaction rows
+- [Sarolaner, moxidectin, and pyrantel chewable tablets](https://w0lph.github.io/k9/fda-foi/sarolaner-moxidectin-and-pyrantel-chewable-tablets.html): 3 summaries, 0 PK values, 1 adverse-reaction rows
+- [Selamectin](https://w0lph.github.io/k9/fda-foi/selamectin.html): 8 summaries, 0 PK values, 8 adverse-reaction rows
+- [Selegiline Hydrochloride](https://w0lph.github.io/k9/fda-foi/selegiline-hydrochloride.html): 2 summaries, 0 PK values, 12 adverse-reaction rows
+- [Sevoflurane](https://w0lph.github.io/k9/fda-foi/sevoflurane.html): 4 summaries, 7 PK values, 6 adverse-reaction rows
+- [Spinosad](https://w0lph.github.io/k9/fda-foi/spinosad.html): 2 summaries, 16 PK values, 12 adverse-reaction rows
+- [Spinosad and milbemycin oxime](https://w0lph.github.io/k9/fda-foi/spinosad-and-milbemycin-oxime.html): 1 summaries, 1 PK values, 6 adverse-reaction rows
+- [Spironolactone; Benazepril hydrochloride](https://w0lph.github.io/k9/fda-foi/spironolactone-benazepril-hydrochloride.html): 1 summaries, 5 PK values, 6 adverse-reaction rows
+- [Tasipimidine](https://w0lph.github.io/k9/fda-foi/tasipimidine.html): 1 summaries, 8 PK values, 6 adverse-reaction rows
+- [tepoxalin](https://w0lph.github.io/k9/fda-foi/tepoxalin.html): 1 summaries, 8 PK values, 5 adverse-reaction rows
+- [Tigilanol tiglate](https://w0lph.github.io/k9/fda-foi/tigilanol-tiglate.html): 1 summaries, 11 PK values, 6 adverse-reaction rows
+- [Tiletamine Hydrochloride, Zolazepam Hydrochloride](https://w0lph.github.io/k9/fda-foi/tiletamine-hydrochloride-zolazepam-hydrochloride.html): 5 summaries, 8 PK values, 4 adverse-reaction rows
+- [Toceranib phosphate](https://w0lph.github.io/k9/fda-foi/toceranib-phosphate.html): 1 summaries, 9 PK values, 7 adverse-reaction rows
+- [Torsemide](https://w0lph.github.io/k9/fda-foi/torsemide.html): 1 summaries, 8 PK values, 4 adverse-reaction rows
+- [Triamcinolone Acetonide](https://w0lph.github.io/k9/fda-foi/triamcinolone-acetonide.html): 3 summaries, 4 PK values, 6 adverse-reaction rows
+- [Trilostane](https://w0lph.github.io/k9/fda-foi/trilostane.html): 2 summaries, 0 PK values, 7 adverse-reaction rows
+- [Verdinexor](https://w0lph.github.io/k9/fda-foi/verdinexor.html): 2 summaries, 9 PK values, 12 adverse-reaction rows
+- [Xylazine Hydrochloride](https://w0lph.github.io/k9/fda-foi/xylazine-hydrochloride.html): 5 summaries, 0 PK values, 0 adverse-reaction rows
+- [Yohimbine hydrochloride](https://w0lph.github.io/k9/fda-foi/yohimbine-hydrochloride.html): 1 summaries, 0 PK values, 2 adverse-reaction rows
+- [Zinc gluconate neutralized by arginine](https://w0lph.github.io/k9/fda-foi/zinc-gluconate-neutralized-by-arginine.html): 1 summaries, 0 PK values, 6 adverse-reaction rows
+
+## Data and tools
+- [canine-aging-corpus](https://huggingface.co/datasets/w0lph/canine-aging-corpus)
+- [foi-summaries-dog](https://huggingface.co/datasets/w0lph/foi-summaries-dog)
+- [dog-geroscience-mcp-data](https://huggingface.co/datasets/w0lph/dog-geroscience-mcp-data)
+- [canine-geroscience-questions](https://huggingface.co/datasets/w0lph/canine-geroscience-questions)
+- [dog-geroscience-mcp source](https://github.com/w0lph/k9/tree/main/mcp)
