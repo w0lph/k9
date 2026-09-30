@@ -11,7 +11,9 @@ param(
     [string[]]$Only = @("canine-aging-corpus", "canine-geroscience-questions", "foi-summaries-dog", "dog-geroscience-mcp-data"),
     [switch]$Private
 )
-$ErrorActionPreference = "Stop"
+# Windows PowerShell 5.1 turns a native command's stderr into a terminating error when it is
+# redirected; `hf` prints advisory warnings there, so rely on the exit code instead.
+$ErrorActionPreference = "Continue"
 $stage = Join-Path $PSScriptRoot "stage"
 
 foreach ($name in $Only) {
