@@ -20,3 +20,8 @@ publish/stage/
 # Local
 .env
 *.log
+
+# Never commit credentials or recovery codes
+*Recovery-Codes*
+*.pem
+*.key
