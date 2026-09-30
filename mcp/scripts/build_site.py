@@ -35,7 +35,7 @@ from dog_geroscience_mcp import dossier, queries
 BASE_URL = "https://w0lph.github.io/k9"
 REPO = "https://github.com/w0lph/k9"
 HF = "https://huggingface.co/datasets/w0lph"
-VET_COMPARATORS = ["selegiline", "carprofen"]
+VET_COMPARATORS = ["Selegiline", "Carprofen"]
 
 
 def slugify(name: str) -> str:

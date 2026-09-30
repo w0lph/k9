@@ -61,8 +61,8 @@
 - [TM5441 (PAI-1 inhibitor)](https://w0lph.github.io/k9/interventions/tm5441-pai-1-inhibitor.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
 - [Ursodeoxycholic acid](https://w0lph.github.io/k9/interventions/ursodeoxycholic-acid.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
 - [Ursolic  acid](https://w0lph.github.io/k9/interventions/ursolic-acid.html): 2 ITP rows, 0 dog lifespan rows, 1 canine papers, 0 FDA FOI summaries
-- [selegiline](https://w0lph.github.io/k9/interventions/selegiline.html): 0 ITP rows, 1 dog lifespan rows, 19 canine papers, 2 FDA FOI summaries
-- [carprofen](https://w0lph.github.io/k9/interventions/carprofen.html): 0 ITP rows, 0 dog lifespan rows, 1 canine papers, 11 FDA FOI summaries
+- [Selegiline](https://w0lph.github.io/k9/interventions/selegiline.html): 0 ITP rows, 1 dog lifespan rows, 19 canine papers, 2 FDA FOI summaries
+- [Carprofen](https://w0lph.github.io/k9/interventions/carprofen.html): 0 ITP rows, 0 dog lifespan rows, 1 canine papers, 11 FDA FOI summaries
 
 ## FDA FOI summaries by ingredient
 - [(S)-Methoprene](https://w0lph.github.io/k9/fda-foi/s-methoprene.html): 1 summaries, 0 PK values, 4 adverse-reaction rows
