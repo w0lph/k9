@@ -1,0 +1,696 @@
+{
+  "compound": "selegiline",
+  "names_searched": [
+    "selegiline",
+    "L-deprenyl",
+    "deprenyl",
+    "Anipryl",
+    "L deprenyl",
+    "L‐deprenyl"
+  ],
+  "drugage": {
+    "n_experiments": 12,
+    "by_species": {
+      "Canis lupus familiaris": 1,
+      "Mesocricetus auratus": 2,
+      "Mus musculus": 4,
+      "Rattus norvegicus": 5
+    },
+    "itp_rows": [],
+    "dog_rows": [
+      {
+        "compound_name": "L-deprenyl",
+        "species": "Canis lupus familiaris",
+        "strain": "Beagles",
+        "dosage": "1 mg/kg",
+        "avg_lifespan_significance": "NA",
+        "max_lifespan_significance": "NA",
+        "gender": "Unknown",
+        "weight_change_significance": "NA",
+        "itp": "No",
+        "pubmed_id": "9307048"
+      }
+    ],
+    "other_rows_sample": [
+      {
+        "compound_name": "L-deprenyl",
+        "species": "Mesocricetus auratus",
+        "dosage": "0.05 mg/kg/day",
+        "avg_lifespan_significance": "NS",
+        "max_lifespan_change_percent": "4",
+        "max_lifespan_significance": "NA",
+        "gender": "Male",
+        "weight_change_significance": "NA",
+        "itp": "No",
+        "pubmed_id": "9258898"
+      },
+      {
+        "compound_name": "L-deprenyl",
+        "species": "Mesocricetus auratus",
+        "dosage": "0.05 mg/kg/day",
+        "avg_lifespan_significance": "S",
+        "max_lifespan_change_percent": "16.4",
+        "max_lifespan_significance": "NA",
+        "gender": "Female",
+        "weight_change_significance": "NA",
+        "itp": "No",
+        "pubmed_id": "9258898"
+      },
+      {
+        "compound_name": "L-deprenyl",
+        "species": "Mus musculus",
+        "strain": "B6D2F1",
+        "dosage": "0.25 ppm bodyweight 3x/week subcutaneous injection",
+        "age_at_initiation": "26 months",
+        "treatment_duration": "until death",
+        "avg_lifespan_change_percent": "9",
+        "avg_lifespan_significance": "S",
+        "max_lifespan_change_percent": "-1",
+        "max_lifespan_significance": "NA",
+        "gender": "Female",
+        "weight_change_percent": "-3",
+        "weight_change_significance": "NS",
+        "itp": "No",
+        "pubmed_id": "8914495"
+      },
+      {
+        "compound_name": "L-deprenyl",
+        "species": "Mus musculus",
+        "strain": "B6D2F1",
+        "dosage": "0.25 ppm bodyweight 3x/week subcutaneous injection",
+        "age_at_initiation": "26 months",
+        "treatment_duration": "until death",
+        "avg_lifespan_change_percent": "9",
+        "avg_lifespan_significance": "S",
+        "max_lifespan_change_percent": "15",
+        "max_lifespan_significance": "NA",
+        "gender": "Male",
+        "weight_change_percent": "3",
+        "weight_change_significance": "NS",
+        "itp": "No",
+        "pubmed_id": "8914495"
+      },
+      {
+        "compound_name": "L-deprenyl",
+        "species": "Mus musculus",
+        "strain": "B6CBAF1",
+        "dosage": "0.25 ppm bodyweight 3x/week subcutaneous injection",
+        "age_at_initiation": "18.5 months",
+        "treatment_duration": "until death",
+        "avg_lifespan_change_percent": "7",
+        "avg_lifespan_significance": "S",
+        "max_lifespan_change_percent": "31",
+        "max_lifespan_significance": "NA",
+        "gender": "Female",
+        "weight_change_percent": "7",
+        "weight_change_significance": "NS",
+        "itp": "No",
+        "pubmed_id": "8914495"
+      },
+      {
+        "compound_name": "L-deprenyl",
+        "species": "Mus musculus",
+        "strain": "B6CBAF1",
+        "dosage": "0.25 ppm bodyweight 3x/week subcutaneous injection",
+        "age_at_initiation": "18.5 months",
+        "treatment_duration": "until death",
+        "avg_lifespan_change_percent": "6",
+        "avg_lifespan_significance": "S",
+        "max_lifespan_change_percent": "7",
+        "max_lifespan_significance": "NA",
+        "gender": "Male",
+        "weight_change_percent": "8",
+        "weight_change_significance": "NS",
+        "itp": "No",
+        "pubmed_id": "8914495"
+      },
+      {
+        "compound_name": "L-deprenyl",
+        "species": "Rattus norvegicus",
+        "strain": "Fischer 344",
+        "dosage": "0.0025",
+        "avg_lifespan_change_percent": "16.7",
+        "avg_lifespan_significance": "S",
+        "max_lifespan_change_percent": "17",
+        "max_lifespan_significance": "NA",
+        "gender": "Unknown",
+        "weight_change_significance": "NA",
+        "itp": "No",
+        "pubmed_id": "2118586"
+      },
+      {
+        "compound_name": "L-deprenyl",
+        "species": "Rattus norvegicus",
+        "strain": "F344/DuCrj",
+        "dosage": "0.5 mg/kg. 3 times a week",
+        "avg_lifespan_change_percent": "5.6",
+        "avg_lifespan_significance": "S",
+        "max_lifespan_change_percent": "1",
+        "max_lifespan_significance": "NA",
+        "gender": "Male",
+        "weight_change_significance": "NA",
+        "itp": "No",
+        "pubmed_id": "8030852"
+      },
+      {
+        "compound_name": "L-deprenyl",
+        "species": "Rattus norvegicus",
+        "strain": "F344/DuCrj",
+        "dosage": "0.5 mg/kg. 3 times a week",
+        "avg_lifespan_change_percent": "15.1",
+        "avg_lifespan_significance": "S",
+        "max_lifespan_significance": "NA",
+        "gender": "Male",
+        "weight_change_significance": "NA",
+        "itp": "No",
+        "pubmed_id": "8423709"
+      },
+      {
+        "compound_name": "L-deprenyl",
+        "species": "Rattus norvegicus",
+        "strain": "F344/DuCrj",
+        "dosage": "0.25 mg/kg. 3 times a week",
+        "avg_lifespan_change_percent": "6.7",
+        "avg_lifespan_significance": "S",
+        "max_lifespan_significance": "NA",
+        "gender": "Female",
+        "weight_change_significance": "NA",
+        "itp": "No",
+        "pubmed_id": "16463106"
+      },
+      {
+        "compound_name": "L-deprenyl",
+        "species": "Rattus norvegicus",
+        "strain": "F344/DuCrj",
+        "dosage": "0.25 mg/kg. 3 times a week",
+        "avg_lifespan_change_percent": "8.1",
+        "avg_lifespan_significance": "S",
+        "max_lifespan_significance": "NA",
+        "gender": "Male",
+        "weight_change_significance": "NA",
+        "itp": "No",
+        "pubmed_id": "16463106"
+      }
+    ],
+    "source": "DrugAge (HAGR), CC BY 3.0"
+  },
+  "dog_equivalent_doses": {
+    "rows": [
+      {
+        "species": "Mesocricetus auratus",
+        "dosage_as_reported": "0.05 mg/kg/day",
+        "mg_per_kg": 0.05,
+        "dog_equivalent_mg_per_kg": 0.0125,
+        "factor": 0.25,
+        "itp": "No",
+        "pubmed_id": "9258898"
+      },
+      {
+        "species": "Rattus norvegicus",
+        "dosage_as_reported": "0.5 mg/kg. 3 times a week",
+        "mg_per_kg": 0.5,
+        "dog_equivalent_mg_per_kg": 0.15,
+        "factor": 0.3,
+        "itp": "No",
+        "pubmed_id": "8030852"
+      },
+      {
+        "species": "Rattus norvegicus",
+        "dosage_as_reported": "0.25 mg/kg. 3 times a week",
+        "mg_per_kg": 0.25,
+        "dog_equivalent_mg_per_kg": 0.075,
+        "factor": 0.3,
+        "itp": "No",
+        "pubmed_id": "16463106"
+      }
+    ],
+    "method": "FDA 2005 Km body-surface-area conversion; starting-point heuristic only"
+  },
+  "corpus": {
+    "records_mentioning_compound": 19,
+    "top_core_hits": [
+      {
+        "key": "MED:9076907",
+        "title": "Management of canine pituitary-dependent hyperadrenocorticism with l-deprenyl (Anipryl).",
+        "year": 1997,
+        "journal": "The Veterinary clinics of North America. Small animal practice",
+        "pmid": "9076907",
+        "doi": "10.1016/s0195-5616(97)50031-3",
+        "is_open_access": false,
+        "has_fulltext_md": false,
+        "tiers": "core;extended",
+        "cited_by_count": 11,
+        "pub_types": "Review;Journal Article",
+        "snippet": "…We have outlined the successful management of canine PDH patients with [l-deprenyl], a selective MAO-B inhibitor. Treatment with [l-deprenyl] results in…"
+      },
+      {
+        "key": "MED:9307048",
+        "title": "Treatment with L-deprenyl prolongs life in elderly dogs.",
+        "year": 1997,
+        "journal": "Life sciences",
+        "pmid": "9307048",
+        "doi": "10.1016/s0024-3205(97)00611-5",
+        "is_open_access": false,
+        "has_fulltext_md": false,
+        "tiers": "core;extended",
+        "cited_by_count": 33,
+        "pub_types": "Journal Article",
+        "snippet": "…When survivorship for all dogs in the study was analyzed there was no significant difference between the [L-deprenyl] and placebo treated groups, most…"
+      },
+      {
+        "key": "MED:40816452",
+        "title": "L-deprenyl extends lifespan across mammalian species: A meta-analysis of 22 longevity experiments.",
+        "year": 2025,
+        "journal": "Ageing research reviews",
+        "pmid": "40816452",
+        "pmcid": "PMC12426863",
+        "doi": "10.1016/j.arr.2025.102873",
+        "is_open_access": false,
+        "has_fulltext_md": true,
+        "tiers": "core;extended",
+        "cited_by_count": 0,
+        "pub_types": "Meta-Analysis;research-article;Journal Article",
+        "snippet": "…[L-deprenyl], an FDA approved medication, has been investigated for its role in aging for over three decades. To evaluate the effect of [L]…"
+      },
+      {
+        "key": "MED:9327904",
+        "title": "Therapeutic actions of L-deprenyl in dogs: a model of human brain aging.",
+        "year": 1998,
+        "journal": "Advances in pharmacology (San Diego, Calif.)",
+        "pmid": "9327904",
+        "doi": "10.1016/s1054-3589(08)60753-x",
+        "is_open_access": false,
+        "has_fulltext_md": false,
+        "tiers": "core;extended",
+        "cited_by_count": 2,
+        "pub_types": "Journal Article"
+      },
+      {
+        "key": "MED:8030851",
+        "title": "Effects of L-deprenyl on manifestations of aging in the rat and dog.",
+        "year": 1994,
+        "journal": "Annals of the New York Academy of Sciences",
+        "pmid": "8030851",
+        "doi": "10.1111/j.1749-6632.1994.tb12072.x",
+        "is_open_access": false,
+        "has_fulltext_md": false,
+        "tiers": "core;extended",
+        "cited_by_count": 8,
+        "pub_types": "Review;Journal Article"
+      },
+      {
+        "key": "PAT:EP0473252",
+        "title": "Use of L-deprenyl for retarding deterioration due to aging",
+        "year": 1992,
+        "is_open_access": false,
+        "has_fulltext_md": false,
+        "tiers": "core;extended",
+        "cited_by_count": 0,
+        "pub_types": "Patent",
+        "snippet": "[L-deprenyl] and pharmaceutically acceptable analog forms thereof are used at specific dosage levels and frequency of dosage to slow the normal age dependent…"
+      },
+      {
+        "key": "MED:6428148",
+        "title": "Deprenyl (selegiline): the history of its development and pharmacological action.",
+        "year": 1983,
+        "journal": "Acta neurologica Scandinavica. Supplementum",
+        "pmid": "6428148",
+        "doi": "10.1111/j.1600-0404.1983.tb01517.x",
+        "is_open_access": false,
+        "has_fulltext_md": false,
+        "tiers": "core;extended",
+        "cited_by_count": 92,
+        "pub_types": "Historical Article;Journal Article",
+        "snippet": "…The most important effect of [deprenyl] in the brain is the sensitization of dopaminergic neurons to physiological and pharmacological influences, but in contrast to…"
+      },
+      {
+        "key": "MED:12044958",
+        "title": "Why (--)deprenyl prolongs survivals of experimental animals: increase of anti-oxidant enzymes in brain and other body tissues as well as mobilization of various humoral factors may lead to systemic anti-aging effects.",
+        "year": 2002,
+        "journal": "Mechanisms of ageing and development",
+        "pmid": "12044958",
+        "doi": "10.1016/s0047-6374(01)00392-x",
+        "is_open_access": false,
+        "has_fulltext_md": false,
+        "tiers": "core;extended",
+        "cited_by_count": 44,
+        "pub_types": "Research Support, Non-U.S. Gov't;Review;Journal Article",
+        "snippet": "…An apparent extension of life spans of experimental animals reported in the past may be better explained by these new observations that (-)[deprenyl] upregulate…"
+      },
+      {
+        "key": "MED:11795516",
+        "title": "Do antioxidant strategies work against aging and age-associated disorders? Propargylamines: a possible antioxidant strategy.",
+        "year": 2001,
+        "journal": "Annals of the New York Academy of Sciences",
+        "pmid": "11795516",
+        "doi": "10.1111/j.1749-6632.2001.tb05654.x",
+        "is_open_access": false,
+        "has_fulltext_md": false,
+        "tiers": "core;extended",
+        "cited_by_count": 10,
+        "pub_types": "Comparative Study;Research Support, Non-U.S. Gov't;Review;Journal Article",
+        "snippet": "…Despite these difficulties, the success in extending life span of 4 different animal species (mice, rats, hamsters, and dogs) with (-)[deprenyl] (including a study…"
+      },
+      {
+        "key": "MED:11976204",
+        "title": "Pharmacological interventions in aging and age-associated disorders: potentials of propargylamines for human use.",
+        "year": 2002,
+        "journal": "Annals of the New York Academy of Sciences",
+        "pmid": "11976204",
+        "doi": "10.1111/j.1749-6632.2002.tb02101.x",
+        "is_open_access": false,
+        "has_fulltext_md": false,
+        "tiers": "core;extended",
+        "cited_by_count": 9,
+        "pub_types": "Research Support, Non-U.S. Gov't;Review;Journal Article",
+        "snippet": "Past studies including our own have confirmed that chronic administration of [deprenyl] can prolong life spans of at least four different animal species. Pretreatment…"
+      }
+    ],
+    "dog_trials": [
+      {
+        "key": "MED:9307048",
+        "title": "Treatment with L-deprenyl prolongs life in elderly dogs.",
+        "year": 1997,
+        "journal": "Life sciences",
+        "pmid": "9307048",
+        "doi": "10.1016/s0024-3205(97)00611-5",
+        "is_open_access": false,
+        "has_fulltext_md": false,
+        "tiers": "core;extended",
+        "cited_by_count": 33,
+        "pub_types": "Journal Article",
+        "snippet": "…When survivorship for all dogs in the study was analyzed there was no significant difference between the [L-deprenyl] and [placebo] treated groups, most…"
+      },
+      {
+        "key": "MED:40816452",
+        "title": "L-deprenyl extends lifespan across mammalian species: A meta-analysis of 22 longevity experiments.",
+        "year": 2025,
+        "journal": "Ageing research reviews",
+        "pmid": "40816452",
+        "pmcid": "PMC12426863",
+        "doi": "10.1016/j.arr.2025.102873",
+        "is_open_access": false,
+        "has_fulltext_md": true,
+        "tiers": "core;extended",
+        "cited_by_count": 0,
+        "pub_types": "Meta-Analysis;research-article;Journal Article",
+        "snippet": "…To evaluate the effect of [L-deprenyl] on lifespan in mammals we performed a [random]-effects meta-analysis on 22 rodent lifespan experiments. The…"
+      },
+      {
+        "key": "MED:32715279",
+        "title": "Phosphodiesterase Inhibitors for Alzheimer's Disease: A Systematic Review of Clinical Trials and Epidemiology with a Mechanistic Rationale.",
+        "year": 2020,
+        "journal": "Journal of Alzheimer's disease reports",
+        "pmid": "32715279",
+        "pmcid": "PMC7369141",
+        "doi": "10.3233/adr-200191",
+        "is_open_access": true,
+        "has_fulltext_md": true,
+        "tiers": "extended",
+        "cited_by_count": 88,
+        "pub_types": "review-article;Review;Journal Article",
+        "snippet": "…Vinpocetine, cilostazol, and nicergoline [trials] are mixed. [Deprenyl]/[selegiline] [trials] show only short-term benefits. Broad-spectrum phosphodiesterase inhibitor propentofylline has been shown in…"
+      },
+      {
+        "key": "MED:15795058",
+        "title": "The canine model of human cognitive aging and dementia: pharmacological validity of the model for assessment of human cognitive-enhancing drugs.",
+        "year": 2005,
+        "journal": "Progress in neuro-psychopharmacology & biological psychiatry",
+        "pmid": "15795058",
+        "doi": "10.1016/j.pnpbp.2004.12.014",
+        "is_open_access": false,
+        "has_fulltext_md": false,
+        "tiers": "core;extended",
+        "cited_by_count": 57,
+        "pub_types": "Research Support, U.S. Gov't, P.H.S.;Research Support, Non-U.S. Gov't;Review;Journal Article;Research Support, N.I.H., Extramural",
+        "snippet": "…two acetylcholinesterase inhibitors, (2) an ampakine, (3) [selegiline] hydrochloride, two drugs that have failed human AD [trials], and (4) adrafinil, a putative CET. Our…"
+      },
+      {
+        "key": "MED:15795056",
+        "title": "Therapeutic agents for the treatment of cognitive dysfunction syndrome in senior dogs.",
+        "year": 2005,
+        "journal": "Progress in neuro-psychopharmacology & biological psychiatry",
+        "pmid": "15795056",
+        "doi": "10.1016/j.pnpbp.2004.12.012",
+        "is_open_access": false,
+        "has_fulltext_md": false,
+        "tiers": "extended",
+        "cited_by_count": 30,
+        "pub_types": "Review;Journal Article",
+        "snippet": "…use in dogs with cognitive dysfunction and, in some cases clinical [trials] have validated their efficacy. Furthermore, the testing of products currently licensed and…"
+      }
+    ],
+    "source": "canine-aging-corpus (Europe PMC)"
+  },
+  "target": null,
+  "openfda_dog_adverse_events": {
+    "ingredient": "selegiline",
+    "total": 4117,
+    "top_reactions": [
+      {
+        "term": "Vomiting",
+        "count": 449
+      },
+      {
+        "term": "INEFFECTIVE, COGNITIVE DYSFUNC",
+        "count": 439
+      },
+      {
+        "term": "INEFFECTIVE, LOSS OF EFFECT",
+        "count": 338
+      },
+      {
+        "term": "Diarrhoea",
+        "count": 337
+      },
+      {
+        "term": "Anorexia",
+        "count": 324
+      },
+      {
+        "term": "Lack of efficacy - NOS",
+        "count": 311
+      },
+      {
+        "term": "Depression",
+        "count": 301
+      },
+      {
+        "term": "Restlessness",
+        "count": 262
+      },
+      {
+        "term": "INEFFECTIVE, CUSHINGS",
+        "count": 252
+      },
+      {
+        "term": "Death by euthanasia",
+        "count": 243
+      }
+    ],
+    "source": "openFDA animal & veterinary event API"
+  },
+  "foi_summaries_dog": [
+    {
+      "foi_id": 2554,
+      "application_number": "141-080",
+      "proprietary_name": "Anipryl®",
+      "ingredients": "Selegiline Hydrochloride",
+      "sponsor": "Zoetis Inc.",
+      "approval_type": "Original approval",
+      "approval_date": "May 30, 1997",
+      "catalogue_summary": "<p>For the control of clinical signs associated with uncomplicated canine pituitary dependent hyperadrenocorticism (PDH).<br/></p>",
+      "recommended_dosage": "After confirmation of the diagnosis of PDH, Anipryl is recommended orally once daily at an initial dose of 1 mg/kg (0.45 mg/lb) body weight, administered in the morning. During the first two months of therapy, the patient should be re-evaluated regularly for clinical response by history and physical examination. If no improvement in clinical signs or physical examination findings is evident after 2 months of therapy, the dose can be increased to a maximum of 2 mg/kg once daily. While increasing the dose from 1.0 to 2.0 mg/kg in a particular patient may not improve the effectiveness of the drug",
+      "indications": "Anipryl tablets are indicated for the control of clinical signs associated with uncomplicated canine pituitary dependent hyperadrenocorticism (PDH).",
+      "pk_sentences": [],
+      "safety_sentences": [
+        "Heimbichner Fermenta Animal Health Company Research Center 1512 Webster Court Fort Collins, CO 80524 Freedom of Information Summary NADA 141-080 Page 12 of 14 Purpose: to determine the safety of Anipryl® when administered, per os, at 0.5, 1, 1.5 and 3 times the maximum daily level to adult dogs over a period of 6 months, as compared to a placebo control.",
+        "Two dogs in the 6 mg/kg group were responsible for a majority of the clinical observations and best demonstrate the toxic effects of Anipryl.",
+        "Anipryl causes toxicity at 3 and 6 mg/kg (1.5X and 3X the maximum recommended daily dose) when administered daily for 6 months to dogs."
+      ],
+      "pdf_url": "https://animaldrugsatfda.fda.gov/adafda/app/search/public/document/downloadFoi/2554",
+      "likely_scanned": false,
+      "species_flag": "dog"
+    },
+    {
+      "foi_id": 614,
+      "application_number": "141-080",
+      "proprietary_name": "Anipryl®",
+      "ingredients": "Selegiline Hydrochloride",
+      "sponsor": "Zoetis Inc.",
+      "approval_type": "Supplemental approval",
+      "approval_date": "December 10, 1998",
+      "catalogue_summary": "Provides for the addition of a new claim for the clinical signs associated with canine Cognitive Dysfunction Syndrome at a new dose of 0.5-1.0mg/kg.",
+      "recommended_dosage": "form: Anipryl formulated into 2 mg, 5 mg, and 15 mg tablets Route of administration: Oral",
+      "pk_sentences": [],
+      "safety_sentences": [],
+      "pdf_url": "https://animaldrugsatfda.fda.gov/adafda/app/search/public/document/downloadFoi/614",
+      "likely_scanned": false,
+      "species_flag": "dog"
+    }
+  ],
+  "foi_structured": [
+    {
+      "foi_id": 2554,
+      "application_number": "141-080",
+      "product_name": "Anipryl®",
+      "ingredient": "Selegiline Hydrochloride",
+      "species_class": "Dogs",
+      "indication": "Control of clinical signs associated with uncomplicated canine pituitary dependent hyperadrenocorticism (PDH)",
+      "pharmacokinetics": [],
+      "target_animal_safety": {
+        "dose_multiples": [
+          "0.5X (1 mg/kg/day)",
+          "1X (2 mg/kg/day)",
+          "1.5X (3 mg/kg/day)",
+          "3X (6 mg/kg/day)"
+        ],
+        "duration": "183 consecutive days (6 months), oral, placebo-controlled",
+        "n_animals": "40",
+        "findings": [
+          {
+            "finding": "Stereotypic weaving behavior significantly increased at 6 mg/kg (3X) vs placebo; led to abrasions on legs/nose/foot pads in 6 dogs",
+            "quote": "At a dose of 6 mg/kg, the incidence of stereotypic (repetitive) behavior as evidenced by weaving back and forth in the cage, was statistically significant (p < 0.0171) compared to placebo."
+          },
+          {
+            "finding": "Decreased mean body weight at 3 and 6 mg/kg from month 3 onward despite normal-to-increased feed consumption",
+            "quote": "Mean body weights were decreased for the 3 and 6 mg/kg groups relative to control from months 3 to the end of the study."
+          },
+          {
+            "finding": "Increased ALT activity at 6 mg/kg (only significant hepatic enzyme effect)",
+            "quote": "The only statistically significant treatment effect was an increase in ALT activity for dogs receiving 6 mg/kg."
+          },
+          {
+            "finding": "No effects on blood pressure, heart rate, ECG or ophthalmic examination",
+            "quote": "There were no significant changes noted in blood pressure, heart rate and ECG parameters, nor were there any ophthalmic changes."
+          },
+          {
+            "finding": "Toxicity (hypersalivation, decreased pupillary light response, panting, dehydration, weight loss) at 1.5X and 3X the maximum recommended dose; safe at 1-2 mg/kg",
+            "quote": "Anipryl causes toxicity at 3 and 6 mg/kg (1.5X and 3X the maximum recommended daily dose) when administered daily for 6 months to dogs."
+          }
+        ],
+        "design_quote": "Purpose: to determine the safety of Anipryl® when administered, per os, at 0.5, 1, 1.5 and 3 times the maximum daily level to adult dogs over a period of 6 months, as compared to a placebo control. Animals : 40 beagle dogs (20 male and 20 female) were assigned to one of five treatment groups with each group containing 4 males and 4 females."
+      },
+      "effectiveness": {
+        "design": "PDH3: open-label, multi-site clinical field trial, dogs served as their own controls; Anipryl 1 mg/kg orally once daily for 6 months in client-owned dogs with confirmed PDH (pivotal for the 1 mg/kg dose). Supported by PDH2 open-label dose-range trial (0.5/1.0/2.0 mg/kg, 41 dogs) and PDH4 open-label 2 mg/kg trial (39 dogs).",
+        "n_dogs": "52",
+        "primary_endpoint": "Investigator monthly clinical assessment (slightly improved/improved vs same/worse) and owner-reported quality of life; LDDS test results as endocrine measure",
+        "result": "34/52 (65%) slightly improved or improved at month 1 and 88% by month 2; final assessment 43/52 (83%) improved; 21% failure rate; population LDDS results improved significantly but did not correlate with individual clinical response",
+        "quote": "As summarized in the following table, during the first month of therapy, 34 of 52 dogs (65%) were assessed as either slightly improved or improved and 88% were either slightly improved or improved by month 2."
+      },
+      "adverse_reactions": [
+        {
+          "term": "vomiting",
+          "treated": "20/132",
+          "control": null,
+          "quote": "Number of Dogs N = 132 vomiting20diarrhea18restlessness/repetitive movements6lethargy5salivation5anorexia5diminished hearing/deafness3pruritus3licking 3shiver/tremble/shake3"
+        },
+        {
+          "term": "diarrhea",
+          "treated": "18/132",
+          "control": null,
+          "quote": "Number of Dogs N = 132 vomiting20diarrhea18restlessness/repetitive movements6lethargy5salivation5anorexia5diminished hearing/deafness3pruritus3licking 3shiver/tremble/shake3"
+        },
+        {
+          "term": "restlessness/repetitive movements",
+          "treated": "6/132",
+          "control": null,
+          "quote": "Number of Dogs N = 132 vomiting20diarrhea18restlessness/repetitive movements6lethargy5salivation5anorexia5diminished hearing/deafness3pruritus3licking 3shiver/tremble/shake3"
+        },
+        {
+          "term": "lethargy",
+          "treated": "5/132",
+          "control": null,
+          "quote": "Number of Dogs N = 132 vomiting20diarrhea18restlessness/repetitive movements6lethargy5salivation5anorexia5diminished hearing/deafness3pruritus3licking 3shiver/tremble/shake3"
+        },
+        {
+          "term": "salivation",
+          "treated": "5/132",
+          "control": null,
+          "quote": "Number of Dogs N = 132 vomiting20diarrhea18restlessness/repetitive movements6lethargy5salivation5anorexia5diminished hearing/deafness3pruritus3licking 3shiver/tremble/shake3"
+        },
+        {
+          "term": "anorexia",
+          "treated": "5/132",
+          "control": null,
+          "quote": "Number of Dogs N = 132 vomiting20diarrhea18restlessness/repetitive movements6lethargy5salivation5anorexia5diminished hearing/deafness3pruritus3licking 3shiver/tremble/shake3"
+        }
+      ],
+      "notes": "Adverse-event table pooled from the three open-label field trials (PDH2/PDH3/PDH4, N=132, no placebo control) was flattened by PDF extraction (counts run into terms, e.g. 'vomiting20diarrhea18'); counts were read from that flattened row, quoted as extracted. No pharmacokinetic data in this summary. Effectiveness block is the PDH3 (1 mg/kg) trial; PDH4 (2 mg/kg, 39 dogs) reported 54%/61% response at months 1/2.",
+      "extracted_by": "claude-fable-5-1 subagent",
+      "dose_regimen": {
+        "dose": "1 mg/kg (0.45 mg/lb) initial; may be increased to a maximum of 2 mg/kg",
+        "route": "oral",
+        "frequency": "once daily, in the morning",
+        "duration_or_conditions": "Re-evaluate regularly during the first two months; increase to 2 mg/kg only if no improvement after 2 months of therapy",
+        "quote": "After confirmation of the diagnosis of PDH, Anipryl is recommended orally once daily at an initial dose of 1 mg/kg (0.45 mg/lb) body weight, administered in the morning. During the first two months of therapy, the patient should be re-evaluated regularly for clinical response by history and physical examination. If no improvement in clinical signs or physical examination findings is evident after 2 months of therapy, the dose can be increased to a maximum of 2 mg/kg once daily."
+      }
+    },
+    {
+      "foi_id": 614,
+      "application_number": "141-080",
+      "product_name": "Anipryl®",
+      "ingredient": "Selegiline Hydrochloride",
+      "species_class": "Dogs",
+      "indication": "Control of clinical signs associated with canine Cognitive Dysfunction Syndrome (CDS) (supplemental second claim)",
+      "pharmacokinetics": [],
+      "effectiveness": {
+        "design": "CD/HT: Phase 1 placebo-controlled, multi-site, dose-range field trial (placebo n=67, 0.2 mg/kg n=65, 1.0 mg/kg n=67 once daily for 4 weeks) followed by Phase 2 open-label 1.0 mg/kg for 8 additional weeks; 199 client-owned aged dogs with acquired cognitive dysfunction enrolled. Supported by CD3 open-label 0.5 mg/kg dose-confirmation trial (73 dogs).",
+        "n_dogs": "181",
+        "primary_endpoint": "Owner-assessed improvement (telephone interview with behavioral consultants) at week 4 in orientation, activity, sleep pattern, housetraining, responsiveness and greeting behavior",
+        "result": "At week 4, 1.0 mg/kg improved sleep pattern (52.7% vs 16.7% placebo, p=0.001), activity (54.7% vs 28.6%, p=0.012) and housetraining (p=0.030); trends indicate 1.0 mg/kg more effective than 0.2 mg/kg; duration of effect may be as short as 8 weeks in about 50% of cases",
+        "quote": "Results of the 4-week study are based on 181 evaluable dogs."
+      },
+      "adverse_reactions": [
+        {
+          "term": "vomiting",
+          "treated": "87/272 (32%)",
+          "control": "14 (21%)",
+          "quote": "(n=272) vomiting 14 (21%) 87 (32%)"
+        },
+        {
+          "term": "diarrhea",
+          "treated": "55 (20%)",
+          "control": "7 (10%)",
+          "quote": "diarrhea 7 (10%) 55 (20%)"
+        },
+        {
+          "term": "hyperactive/restless",
+          "treated": "42 (15%)",
+          "control": "4 (6%)",
+          "quote": "hyperactive/restless* 4 (6%) 42 (15%)"
+        },
+        {
+          "term": "anorexia",
+          "treated": "29 (11%)",
+          "control": "1 (1%)",
+          "quote": "anorexia 1 (1%) 29 (11%)"
+        },
+        {
+          "term": "neurologic (ataxia, incoordination, staggering, disorientation, decreased proprioception, seizure)",
+          "treated": "26 (10%)",
+          "control": "1 (1%)",
+          "quote": "neurologic** 1 (1%) 26 (10%)"
+        },
+        {
+          "term": "lethargy",
+          "treated": "20 (7%)",
+          "control": "1 (1%)",
+          "quote": "lethargy 1 (1%) 20 (7%)"
+        }
+      ],
+      "notes": "Supplemental approval: no new target animal safety study (safety refers to the May 30, 1997 original FOI), so target_animal_safety is null. Table 4 pooled AEs from CD/HT and CD3: placebo n=67 (Phase 1 of CD/HT), Anipryl n=272. The extracted text splits 'Syndrome' as 'Syndrom e' in the indication sentence and renders the ® after 'Anipryl' as a private-use glyph; quotes were chosen to avoid the glyph and copy the split as extracted.",
+      "extracted_by": "claude-fable-5-1 subagent",
+      "dose_regimen": {
+        "dose": "0.5-1.0 mg/kg",
+        "route": "oral",
+        "frequency": "once daily, preferably in the morning",
+        "duration_or_conditions": "Initially dose to the nearest whole tablet; adjust based on response and tolerance to the drug",
+        "quote": "This supplement changes the original approval by adding a second claim for use in cognitive dysfunction syndrome at a new dose of 0.5-1.0 mg/kg."
+      }
+    }
+  ],
+  "gaps": [
+    "No NIA Interventions Testing Program result flagged in DrugAge."
+  ]
+}

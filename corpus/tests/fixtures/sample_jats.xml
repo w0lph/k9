@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <front>
+    <journal-meta>
+      <journal-title-group><journal-title>GeroScience</journal-title></journal-title-group>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">99999999</article-id>
+      <article-id pub-id-type="pmc">PMC0000001</article-id>
+      <article-id pub-id-type="doi">10.1000/example.2026</article-id>
+      <title-group>
+        <article-title>Weekly <italic>rapamycin</italic> in companion dogs: a test article</article-title>
+      </title-group>
+      <permissions>
+        <license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>CC BY</license-p></license>
+      </permissions>
+      <abstract>
+        <sec><title>Background</title><p>Dogs age faster than humans<xref ref-type="bibr" rid="B1">1</xref>.</p></sec>
+        <sec><title>Results</title><p>Median lifespan was <bold>12.5</bold> years.</p></sec>
+      </abstract>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Introduction</title>
+      <p>The companion dog is a model of aging<xref ref-type="bibr" rid="B2">2</xref>, with IGF-1 (<italic>IGF1</italic>) linked to body size.</p>
+      <sec id="s1a">
+        <title>Prior work</title>
+        <p>Earlier trials used 0.15 mg/kg once weekly.</p>
+        <list list-type="bullet">
+          <list-item><p>Cardiac function</p></list-item>
+          <list-item><p>Activity</p></list-item>
+        </list>
+      </sec>
+    </sec>
+    <sec id="s2">
+      <title>Methods</title>
+      <p>We enrolled 580 dogs.</p>
+      <table-wrap id="T1">
+        <label>Table 1</label>
+        <caption><p>Enrolment by size class.</p></caption>
+        <table>
+          <thead><tr><th>Size</th><th>N</th></tr></thead>
+          <tbody><tr><td>Large</td><td>400</td></tr><tr><td>Giant</td><td>180</td></tr></tbody>
+        </table>
+      </table-wrap>
+      <fig id="F1">
+        <label>Figure 1</label>
+        <caption><p>Study design.</p></caption>
+        <graphic xlink:href="fig1.jpg"/>
+      </fig>
+    </sec>
+  </body>
+  <back>
+    <ref-list><ref id="B1"><mixed-citation>Should not appear.</mixed-citation></ref></ref-list>
+  </back>
+</article>

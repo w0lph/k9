@@ -1,0 +1,31 @@
+[project]
+name = "foi-summaries"
+version = "0.1.0"
+description = "Structured, public-domain dataset of FDA Freedom of Information (FOI) summaries for approved animal drugs, dog products first: index, PDFs, text, parsed sections and General Information fields."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+dependencies = [
+    "httpx>=0.28.1",
+    "pypdf>=5.0",
+]
+
+[project.scripts]
+foi = "foi_summaries.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.11.15,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "foi_summaries"
+
+[dependency-groups]
+dev = ["pytest>=9.1.1", "ruff>=0.16.9"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"

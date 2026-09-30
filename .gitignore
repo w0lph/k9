@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Derived data: rebuilt by the pipelines and published on the Hugging Face Hub (see publish/)
+corpus/data/
+mcp/data/
+foi/data/pdf/
+foi/data/text/
+foi/data/foi_summaries_dog.jsonl
+foi/data/download_log.jsonl
+publish/stage/
+
+# Local
+.env
+*.log

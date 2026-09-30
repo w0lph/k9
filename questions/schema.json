@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/cgq/question.schema.json",
+  "title": "Canine geroscience question",
+  "type": "object",
+  "required": ["question", "answer", "answer_type", "category", "difficulty", "evidence"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^cgq-[0-9]{4}$" },
+    "category": {
+      "type": "string",
+      "enum": [
+        "lifespan_epidemiology", "body_size_genetics", "interventions", "biomarkers_clocks",
+        "cognition", "frailty_hrql", "dap_methods", "translational_model",
+        "immunity_microbiome", "disease_mortality"
+      ]
+    },
+    "difficulty": { "type": "integer", "enum": [1, 2, 3], "description": "1 = stated directly in an abstract; 2 = requires reading a result section or combining two facts; 3 = requires synthesis or a non-obvious detail" },
+    "answer_type": { "type": "string", "enum": ["numeric", "categorical", "short_text", "list", "boolean"] },
+    "question": { "type": "string", "minLength": 15 },
+    "answer": { "type": "string", "minLength": 1, "description": "Concise gold answer, at most 80 words" },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["key", "quote", "location"],
+        "properties": {
+          "key": { "type": "string", "description": "Corpus record key, e.g. MED:28374166" },
+          "pmid": { "type": "string" },
+          "pmcid": { "type": "string" },
+          "doi": { "type": "string" },
+          "title": { "type": "string" },
+          "year": { "type": "integer" },
+          "location": { "type": "string", "enum": ["abstract", "fulltext"] },
+          "quote": { "type": "string", "minLength": 20, "maxLength": 700, "description": "Verbatim span from the record's title/abstract or Markdown full text" }
+        }
+      }
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "notes": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "validated", "reviewed"] },
+    "created": {
+      "type": "object",
+      "properties": { "by": { "type": "string" }, "date": { "type": "string" } }
+    }
+  }
+}

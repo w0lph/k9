@@ -1,0 +1,39 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.w0lph/dog-geroscience-mcp",
+  "title": "Dog Geroscience",
+  "description": "Dog-specific aging tools: HAGR dog rows, dog orthologs, dose translation, DAP codebooks, FDA FOI.",
+  "version": "0.1.0",
+  "websiteUrl": "https://github.com/w0lph/k9/tree/main/mcp",
+  "repository": {
+    "url": "https://github.com/w0lph/k9",
+    "source": "github",
+    "subfolder": "mcp"
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "dog-geroscience-mcp",
+      "version": "0.1.0",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "DOG_GERO_DATA",
+          "description": "Directory for the prebuilt SQLite database (about 90 MB, downloaded from the Hugging Face Hub on first run). Default: a per-user cache directory.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "DOG_GERO_DB_URL",
+          "description": "Alternative download URL for the prebuilt database (a mirror, or a build of your own).",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

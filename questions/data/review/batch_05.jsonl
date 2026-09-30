@@ -1,0 +1,26 @@
+{"id": "cgq-0109", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0110", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0111", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0112", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0113", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0114", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0115", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0116", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0117", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0118", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0119", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0120", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0121", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0122", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0123", "verdict": "pass", "issue": "", "confidence": "medium"}
+{"id": "cgq-0124", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0125", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0126", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0127", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0128", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0129", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0130", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0131", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0132", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0133", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0134", "verdict": "fix", "issue": "Question stem calls both surveys 'surveys of UK Kennel Club registered dogs', but the 2004 survey covered dogs owned by breed-club members of KC-recognised breeds, not (necessarily) KC-registered dogs; only the 2014 survey was of KC-registered dogs.", "fix": {"question": "Two owner-based mortality surveys of purebred dogs in the UK reported leading causes of death: the questionnaire survey sent in 2004 to members of breed clubs of Kennel Club-recognised breeds (15,881 deaths) and the survey of dogs registered with the Kennel Club in 2014 (5663 deceased dogs). What was the single most commonly reported cause of death in each survey, with its percentage?"}, "confidence": "medium"}

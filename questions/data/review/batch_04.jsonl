@@ -1,0 +1,27 @@
+{"id": "cgq-0082", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0083", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0084", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0085", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0086", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0087", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0088", "verdict": "fix", "issue": "Labelled numeric but the answer pairs a percentage with a categorical explanation (breed not in reference panel), so short_text describes it better.", "fix": {"answer_type": "short_text"}, "confidence": "medium"}
+{"id": "cgq-0089", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0090", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0091", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0092", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0093", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0094", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0095", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0096", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0097", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0098", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0099", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0100", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0101", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0102", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0103", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0104", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0105", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0106", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0107", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0108", "verdict": "pass", "issue": "", "confidence": "high"}

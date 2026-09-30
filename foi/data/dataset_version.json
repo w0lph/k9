@@ -1,0 +1,18 @@
+{
+  "built_at": "2026-09-29T02:27:10+00:00",
+  "tool_version": "0.1.0",
+  "records": 497,
+  "with_text": 497,
+  "likely_scanned": 0,
+  "with_template_sections": 480,
+  "species_flag": {
+    "dog": 453,
+    "other": 34,
+    "unknown": 10
+  },
+  "distinct_applications": 350,
+  "distinct_ingredients": 159,
+  "source": "https://animaldrugsatfda.fda.gov/adafda/app/search/public",
+  "license": "US Government work (FDA Center for Veterinary Medicine); public domain in the United States.",
+  "output": "D:\\OneDrive\\k9\\foi\\data\\foi_summaries_dog.jsonl"
+}

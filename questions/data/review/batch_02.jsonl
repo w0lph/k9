@@ -1,0 +1,27 @@
+{"id": "cgq-0028", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0029", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0030", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0031", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0032", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0033", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0034", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0035", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0036", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0037", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0038", "verdict": "fix", "issue": "A flat 'No' is contradicted by the same abstract's Results ('Radiographic OA severity was greater for CF dogs at 6 years only, P<.05'); the quote is the authors' overall conclusion, so the question should ask what the study concluded and should also ask for the 'no additional incremental worsening' clause the answer already contains.", "fix": {"question": "In the longitudinal study of lifetime 25% calorie restriction in 48 Labrador retrievers, did the authors conclude that there were differences between diet-restricted and control-fed dogs in the prevalence or severity of radiographic and histopathologic elbow osteoarthritis, and did the 1.8-year extension in median lifespan come with any additional incremental worsening of elbow disease?"}, "confidence": "medium"}
+{"id": "cgq-0039", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0040", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0041", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0042", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0043", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0044", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0045", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0046", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0047", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0048", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0049", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0050", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0051", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0052", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0053", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0054", "verdict": "fix", "issue": "The '(CD4-/CD8-)' gloss on DN T cells is not in the quoted sentence (it comes from the paper's Results section elsewhere), so the answer states a fact the quote does not carry; trimmed to keep the answer quote-grounded.", "fix": {"answer": "Breed weight category (selected in all 71 ATAC and all 71 DNAm models); CD62L-negative double-negative (DN) T cell proportions (70 of 71 ATAC models)."}, "confidence": "medium"}

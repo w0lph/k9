@@ -1,0 +1,50 @@
+{
+  "version": "6.9",
+  "hitCount": 3,
+  "nextCursorMark": "CURSOR2",
+  "request": {"queryString": "test", "resultType": "core", "cursorMark": "*", "pageSize": 2},
+  "resultList": {
+    "result": [
+      {
+        "id": "38263575",
+        "source": "MED",
+        "pmid": "38263575",
+        "pmcid": "PMC0000001",
+        "doi": "10.1000/example.2026",
+        "title": "Weekly rapamycin in companion dogs: a test article",
+        "authorString": "Doe J, Roe R.",
+        "authorList": {"author": [{"fullName": "Doe J", "firstName": "Jane", "lastName": "Doe"}, {"fullName": "Roe R"}]},
+        "journalInfo": {"yearOfPublication": 2026, "journal": {"title": "GeroScience", "medlineAbbreviation": "Geroscience"}},
+        "pubYear": "2026",
+        "abstractText": "Dogs age faster than humans.",
+        "pubTypeList": {"pubType": ["research-article", "Journal Article"]},
+        "meshHeadingList": {"meshHeading": [
+          {"majorTopic_YN": "N", "descriptorName": "Animals"},
+          {"majorTopic_YN": "Y", "descriptorName": "Dogs", "meshQualifierList": {"meshQualifier": [{"qualifierName": "physiology", "majorTopic_YN": "N"}]}}
+        ]},
+        "keywordList": {"keyword": ["Aging", "Rapamycin"]},
+        "grantsList": {"grant": [{"grantId": "R01AG090843", "agency": "NIA NIH HHS", "acronym": "AG"}]},
+        "fullTextUrlList": {"fullTextUrl": [{"availabilityCode": "OA", "documentStyle": "html", "site": "Europe_PMC", "url": "https://europepmc.org/articles/PMC0000001"}]},
+        "isOpenAccess": "Y",
+        "inEPMC": "Y",
+        "inPMC": "Y",
+        "hasPDF": "Y",
+        "license": "cc by",
+        "citedByCount": 4,
+        "firstPublicationDate": "2026-01-23"
+      },
+      {
+        "id": "PPR900001",
+        "source": "PPR",
+        "doi": "10.1101/2026.06.03.729926",
+        "title": "An interpretable machine learning framework for dog breed inference",
+        "authorString": "Bian X, et al.",
+        "pubYear": "2026",
+        "abstractText": "Preprint abstract.",
+        "isOpenAccess": "N",
+        "inEPMC": "N",
+        "firstPublicationDate": "2026-06-04"
+      }
+    ]
+  }
+}

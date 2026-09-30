@@ -1,0 +1,27 @@
+{"id": "cgq-0055", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0056", "verdict": "fix", "issue": "Two numeric facts (parameter count and AUC) are labelled 'list' whereas comparable two-number questions in the set (e.g. cgq-0057, cgq-0059) use 'numeric'.", "fix": {"answer_type": "numeric"}, "confidence": "medium"}
+{"id": "cgq-0057", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0058", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0059", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0060", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0061", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0062", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0063", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0064", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0065", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0066", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0067", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0068", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0069", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0070", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0071", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0072", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0073", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0074", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0075", "verdict": "fix", "issue": "The parenthetical 'raised from two in phase 1' attributes the earlier two-domain cutoff to phase 1, which is true in the full text but not stated in the cited quote (which only says 'instead of two').", "fix": {"answer": "Three or more impaired domains (instead of the earlier cutoff of two); sensitivity 73% and specificity 70%."}, "confidence": "medium"}
+{"id": "cgq-0076", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0077", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0078", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0079", "verdict": "fix", "issue": "Asking for 'which two variables' is misleading because the same abstract (and the paper's title) also reports an association with on/off-leash gait speed; the quote only pins down fractional lifespan and working memory.", "fix": {"question": "In the study that used physical activity monitors to record the activity of 27 senior dogs, the authors' main finding was that activity patterns were associated with fractional lifespan and which specific cognitive variable?", "answer": "Working memory.", "answer_type": "short_text"}, "confidence": "medium"}
+{"id": "cgq-0080", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0081", "verdict": "fix", "issue": "The stem's framing 'developed at a veterinary teaching hospital' is not stated anywhere in the paper (it names NCSU and enrolment across hospital services plus a general practice), so the unsupported detail should be dropped from the question.", "fix": {"question": "In the 2024 study that developed a clinically applicable frailty phenotype screening tool for aging dogs (evaluated in a prospective cohort of 198 dogs), which five domains were operationalized, and what replaced the walking-speed measure used in the human frailty phenotype?"}, "confidence": "medium"}

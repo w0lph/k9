@@ -1,0 +1,28 @@
+[project]
+name = "canine-geroscience-questions"
+version = "0.1.0"
+description = "A grounded question set for canine geroscience: every gold answer cites a corpus record and a verbatim quote, checked by a validator."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "CC-BY-4.0" }
+dependencies = []
+
+[project.scripts]
+cgq = "cgq.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.11.15,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "cgq"
+
+[dependency-groups]
+dev = ["pytest>=9.1.1", "ruff>=0.16.9"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"

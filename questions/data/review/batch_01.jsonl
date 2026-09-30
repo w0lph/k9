@@ -1,0 +1,27 @@
+{"id": "cgq-0001", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0002", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0003", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0004", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0005", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0006", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0007", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0008", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0009", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0010", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0011", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0012", "verdict": "fix", "issue": "The Portuguese paper's full text reports 6.29 years for the French Bulldog (Results text and Table 2) while its abstract, which the evidence quote and gold answer follow, says 6.27; the question should pin the answer to the abstracts so a full-text-informed answer of 6.29 is not wrongly graded against it.", "fix": {"question": "Both the 2022 VetCompass life-table study of UK companion dogs and the 2024 study of life expectancy at birth using Portugal's national registry (278,116 dogs) identified the breed with the lowest life expectancy at birth. Which breed was it in each study, and what were the two estimates as reported in each study's abstract?"}, "confidence": "medium"}
+{"id": "cgq-0013", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0014", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0015", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0016", "verdict": "drop", "issue": "Near-duplicate of cgq-0008: same paper (MED:23535614), same core question (driving force behind the size-lifespan trade-off) and an answer that is a strict subset of cgq-0008's answer.", "confidence": "high"}
+{"id": "cgq-0017", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0018", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0019", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0020", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0021", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0022", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0023", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0024", "verdict": "pass", "issue": "", "confidence": "medium"}
+{"id": "cgq-0025", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0026", "verdict": "pass", "issue": "", "confidence": "high"}
+{"id": "cgq-0027", "verdict": "pass", "issue": "", "confidence": "high"}
