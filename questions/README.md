@@ -111,3 +111,22 @@ agent to beat.
 
 Questions and answers: CC BY 4.0. Quotes remain under the licence of their source article
 and are limited to short spans for evaluation purposes.
+
+## Evaluating models with lm-evaluation-harness
+
+The set is packaged as two tasks for EleutherAI's `lm-evaluation-harness`
+(`lm_eval/tasks/canine_geroscience/`, contributed upstream from the `canine_geroscience`
+branch of github.com/w0lph/lm-evaluation-harness):
+
+- `canine_geroscience`: all 133 questions, free-form generation scored with normalised exact
+  match and SQuAD-style token F1 (gold answers are short spans, so F1 is the headline number).
+- `canine_geroscience_numeric`: the 58 numeric questions, scored with `numeric_acc` (the gold
+  answer's primary figure appears in the model's answer; confidence-interval parentheticals
+  are ignored) and the stricter `numeric_acc_all`.
+
+```bash
+lm-eval run --model hf --model_args pretrained=<model> --tasks canine_geroscience,canine_geroscience_numeric --apply_chat_template
+```
+
+Zero-shot by default; `--num_fewshot 3` adds three hand-written examples that are not part of
+the evaluation set.
