@@ -1,5 +1,9 @@
 # Publishing guide
 
+Status (2026-09-30): GitHub repository, the four Hugging Face datasets, PyPI
+`dog-geroscience-mcp 0.1.0` and the MCP registry entry `io.github.w0lph/dog-geroscience-mcp`
+are live. Glama submission is the remaining step (section 4).
+
 Three targets, in dependency order: the **Hugging Face Hub** hosts the datasets and the
 prebuilt database the server downloads on first run; **PyPI** plus the **MCP registry** make
 `uvx dog-geroscience-mcp` discoverable; **Glama** indexes the GitHub repository and builds
