@@ -15,6 +15,11 @@ Pages:
     fda-foi/<slug>.html            products, dose regimen, PK values, target-animal safety,
                                    effectiveness, adverse reactions, each with its quote
     llms.txt, sitemap.xml, robots.txt
+
+Files in scripts/site_static/ (search-engine verification files such as google<token>.html or
+BingSiteAuth.xml) are copied verbatim into the site root on every build, and
+scripts/site_static/verification.json ({"google-site-verification": "<token>", ...}) becomes
+<meta> tags on the home page, so verification survives a rebuild.
 """
 
 from __future__ import annotations
@@ -33,6 +38,7 @@ from pathlib import Path
 from dog_geroscience_mcp import dossier, queries
 
 BASE_URL = "https://w0lph.github.io/k9"
+STATIC_DIR = Path(__file__).resolve().parent / "site_static"
 REPO = "https://github.com/w0lph/k9"
 HF = "https://huggingface.co/datasets/w0lph"
 VET_COMPARATORS = ["Selegiline", "Carprofen"]
@@ -88,7 +94,8 @@ def quote_block(text) -> str:
 BUILD_DATE = dt.date.today().isoformat()  # replaced by the database build date in build()
 
 
-def page(title: str, description: str, body: str, path: str, jsonld: dict | None = None, depth: int = 1) -> str:
+def page(title: str, description: str, body: str, path: str, jsonld: dict | None = None, depth: int = 1,
+         head_extra: str = "") -> str:
     root = "../" * depth if depth else "./"
     canonical = f"{BASE_URL}/{path}"
     ld = ""
@@ -103,7 +110,7 @@ def page(title: str, description: str, body: str, path: str, jsonld: dict | None
 <meta name="description" content="{esc(description)}">
 <link rel="canonical" href="{esc(canonical)}">
 <link rel="stylesheet" href="{root}style.css">
-{ld}
+{head_extra}{ld}
 </head>
 <body>
 <header><nav>
@@ -315,6 +322,14 @@ def build(db: Path, out: Path) -> dict:
     out.mkdir(parents=True, exist_ok=True)
     write(out, "style.css", CSS.strip() + "\n")
     write(out, ".nojekyll", "")
+    verification_meta = ""
+    if STATIC_DIR.is_dir():
+        for f in sorted(STATIC_DIR.iterdir()):
+            if f.name == "verification.json":
+                tokens = json.loads(f.read_text(encoding="utf-8"))
+                verification_meta = "".join(f'<meta name="{esc(k)}" content="{esc(v)}">\n' for k, v in sorted(tokens.items()) if v)
+            elif f.is_file() and f.name != "README.md":
+                (out / f.name).write_bytes(f.read_bytes())
 
     # FOI ingredient pages
     rows = [dict(r) for r in conn.execute(
@@ -398,7 +413,7 @@ def build(db: Path, out: Path) -> dict:
 </ul>
 """
     write(out, "index.html", page("Canine geroscience evidence", "Source-linked evidence pages on aging research in companion dogs: lifespan interventions, dog-equivalent doses, the canine literature, and FDA veterinary drug reviews.",
-                                  body, "index.html", depth=0))
+                                  body, "index.html", depth=0, head_extra=verification_meta))
     urls.insert(0, "index.html")
 
     # llms.txt, sitemap, robots
