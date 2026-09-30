@@ -20,6 +20,8 @@ publish/stage/
 # Local
 .env
 *.log
+# Working notes for upstream contributions (kept out of the public repository by choice)
+upstream/
 
 # Never commit credentials or recovery codes
 *Recovery-Codes*
