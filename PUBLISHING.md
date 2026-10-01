@@ -187,7 +187,11 @@ gh secret set HF_TOKEN --repo w0lph/k9
 ```
 
 Without the secret the workflow still rebuilds and commits the site; only the upload is
-skipped. The structured FOI extraction is not automated (it needs a model): new FOI
+skipped. First run (2026-10-01, run 36796965817): 2.5 minutes end to end, 3,564 records,
+1,140 full texts, 28 tests, 219 pages committed. The FDA catalogue API answered HTTP 500 to
+the GitHub runner (it works from a residential connection), so that run used the published
+FOI dataset; if that persists, the FOI refresh stays a local step: `cd foi && uv run foi run`,
+then `.\publish\hf_upload.ps1 -Owner w0lph -Only foi-summaries-dog`. The structured FOI extraction is not automated (it needs a model): new FOI
 summaries arrive as unstructured records until the next manual extraction pass
 (`foi/README.md`). Installed servers keep the database they downloaded; `uvx
 dog-geroscience-mcp fetch-data --force` picks up the latest one.
