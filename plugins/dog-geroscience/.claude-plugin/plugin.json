@@ -1,6 +1,6 @@
 {
   "name": "dog-geroscience",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Dog-specific aging research tools and a skill that routes questions to them: HAGR dog rows, dog orthologs, FDA dose translation, Dog Aging Project codebooks, FDA FOI summaries with quote-grounded PK and safety data, canine aging literature, intervention dossiers.",
   "author": {
     "name": "w0lph",

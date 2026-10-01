@@ -2,7 +2,7 @@
   "manifest_version": "0.4",
   "name": "dog-geroscience-mcp",
   "display_name": "Dog Geroscience",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Dog-specific aging research tools: HAGR dog rows, dog orthologs, FDA dose translation, Dog Aging Project codebooks, FDA FOI summaries, canine aging literature.",
   "long_description": "Gives Claude the aging-research tools that exist only for companion dogs: the dog rows of AnAge, DrugAge and GenAge; dog orthologs of aging genes via Ensembl; FDA body-surface-area dose translation between species; the Dog Aging Project's public survey codebooks; BM25 search over 3,500+ canine aging papers; FDA Center for Veterinary Medicine FOI summaries for 497 dog products with quote-grounded pharmacokinetic and target-animal-safety data; and an intervention_dossier tool that composes all of it for one compound. The server installs from PyPI through uv and downloads its prebuilt database (about 90 MB) from the Hugging Face Hub on first run. Only three tools make live calls (Ensembl, NIH RePORTER, openFDA).",
   "author": {

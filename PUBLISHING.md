@@ -1,7 +1,7 @@
 # Publishing guide
 
 Status (2026-09-30): GitHub repository, the four Hugging Face datasets, PyPI
-`dog-geroscience-mcp 0.1.0`, the MCP registry entry `io.github.w0lph/dog-geroscience-mcp`,
+`dog-geroscience-mcp 0.1.1`, the MCP registry entry `io.github.w0lph/dog-geroscience-mcp`,
 the Glama listing, the Claude Desktop extension and Claude Code plugin (section 3b) and the
 GitHub Pages evidence site (section 4b) are live.
 
@@ -88,7 +88,7 @@ cd mcp && uv build && uv publish
 
 `uv publish` reads `UV_PUBLISH_TOKEN` (a PyPI API token) or prompts. The wheel contains only
 the package (`uv build` verified: 32 KB) and the README, which carries the registry
-ownership marker `mcp-name: io.github.w0lph/dog-geroscience-mcp`. Version `0.1.0` in
+ownership marker `mcp-name: io.github.w0lph/dog-geroscience-mcp`. Version `0.1.1` in
 `pyproject.toml`, `__init__.py` and `server.json` must stay in step.
 
 Check: `uvx dog-geroscience-mcp fetch-data` from any directory downloads the database into
@@ -120,11 +120,11 @@ new version: bump the three version fields, `uv publish`, `mcp-publisher publish
   package). Build and attach to a GitHub release:
 
 ```bash
-cd mcp && npx @anthropic-ai/mcpb validate mcpb/manifest.json && npx @anthropic-ai/mcpb pack mcpb dist/dog-geroscience-mcp-0.1.0.mcpb
+cd mcp && npx @anthropic-ai/mcpb validate mcpb/manifest.json && npx @anthropic-ai/mcpb pack mcpb dist/dog-geroscience-mcp-0.1.1.mcpb
 ```
 
 ```bash
-gh release create mcp-v0.1.0 mcp/dist/dog-geroscience-mcp-0.1.0.mcpb --title "dog-geroscience-mcp 0.1.0" --notes "Claude Desktop extension bundle (.mcpb) for dog-geroscience-mcp 0.1.0."
+gh release create mcp-v0.1.1 mcp/dist/dog-geroscience-mcp-0.1.1.mcpb --title "dog-geroscience-mcp 0.1.1" --notes "Claude Desktop extension bundle (.mcpb) for dog-geroscience-mcp 0.1.0."
 ```
 
   Optional: submit the bundle to Anthropic's extension directory (Claude Desktop → Settings →

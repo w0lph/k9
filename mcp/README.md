@@ -66,7 +66,7 @@ Claude Desktop, one click: download `dog-geroscience-mcp-<version>.mcpb` from th
 [releases page](https://github.com/w0lph/k9/releases) and open it (Settings → Extensions →
 Install from file). The bundle declares the PyPI package as a `uv`-type extension, so the
 desktop app installs it with its own uv; nothing else to set up. Source of the bundle:
-`mcpb/` (`npx @anthropic-ai/mcpb pack mcpb dist/dog-geroscience-mcp-0.1.0.mcpb`).
+`mcpb/` (`npx @anthropic-ai/mcpb pack mcpb dist/dog-geroscience-mcp-0.1.1.mcpb`).
 
 Claude Code, as a plugin with a routing skill (needs `uv` on the PATH):
 

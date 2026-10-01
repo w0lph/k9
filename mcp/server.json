@@ -3,7 +3,7 @@
   "name": "io.github.w0lph/dog-geroscience-mcp",
   "title": "Dog Geroscience",
   "description": "Dog-specific aging tools: HAGR dog rows, dog orthologs, dose translation, DAP codebooks, FDA FOI.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://github.com/w0lph/k9/tree/main/mcp",
   "repository": {
     "url": "https://github.com/w0lph/k9",
@@ -15,7 +15,7 @@
       "registryType": "pypi",
       "registryBaseUrl": "https://pypi.org",
       "identifier": "dog-geroscience-mcp",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "runtimeHint": "uvx",
       "transport": {
         "type": "stdio"
