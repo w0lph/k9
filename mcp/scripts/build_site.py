@@ -39,6 +39,8 @@ from pathlib import Path
 
 from dog_geroscience_mcp import dossier, queries
 
+import why_dogs  # noqa: E402  (same directory)
+
 BASE_URL = "https://w0lph.github.io/k9"
 STATIC_DIR = Path(__file__).resolve().parent / "site_static"
 TRIALS_PATH = Path(__file__).resolve().parents[2] / "trials" / "data" / "canine_trials.jsonl"
@@ -121,6 +123,7 @@ def page(title: str, description: str, body: str, path: str, jsonld: dict | None
 <body>
 <header><nav>
 <a href="{root}index.html">Canine geroscience evidence</a> ·
+<a href="{root}why-dogs.html">Why dogs</a> ·
 <a href="{root}interventions/index.html">Interventions</a> ·
 <a href="{root}fda-foi/index.html">FDA FOI summaries</a> ·
 <a href="{root}trials/index.html">Trial registry</a> ·
@@ -420,6 +423,9 @@ table{border-collapse:collapse;width:100%;font-size:.9rem;margin:.5em 0}th,td{bo
 q{quotes:'“' '”'}blockquote{margin:.4em 0 .8em;padding:.4em .8em;background:var(--q);border-left:3px solid var(--line);font-size:.92rem}
 footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);margin-top:2em}
 a{color:var(--link)}code{font-size:.9em}ul{padding-left:1.2em}section.record{margin-top:1.5em}
+figure{margin:1em 0}figure svg{max-width:100%;height:auto}figcaption{color:var(--muted);font-size:.85rem}
+.calc{border:1px solid var(--line);border-radius:6px;padding:.6em 1em;margin:1em 0}.calc label{display:inline-block;margin:.3em 1.2em .3em 0}.calc select,.calc input{font:inherit;padding:2px 4px}
+.refs{font-size:.88rem}.refs li{margin:.3em 0}sup a{text-decoration:none}
 """
 
 
@@ -505,6 +511,13 @@ def build(db: Path, out: Path) -> dict:
                                                  "\n".join(body), "interventions/index.html", depth=1))
     urls.append("interventions/index.html")
 
+    # Why dogs: the canonical argument page
+    wd_title, wd_desc, wd_body, wd_svg, wd_stats = why_dogs.render(conn, inter_index, esc)
+    write(out, "why-dogs.html", page(wd_title, wd_desc, wd_body, "why-dogs.html", {"@context": "https://schema.org", "@type": "Article", "headline": wd_title, "description": wd_desc,
+                                                                        "license": "https://creativecommons.org/licenses/by/4.0/", "isBasedOn": [u for _, _, u in why_dogs.REFS]}, depth=0))
+    write(out, "why-dogs-years-to-answer.svg", wd_svg + chr(10))
+    urls.append("why-dogs.html")
+
     # Home
     n_corpus = conn.execute("SELECT COUNT(*) FROM corpus_records").fetchone()[0]
     n_foi = conn.execute("SELECT COUNT(*) FROM foi_dog").fetchone()[0]
@@ -512,6 +525,7 @@ def build(db: Path, out: Path) -> dict:
 <p class="lede">Companion dogs are the one model in which a lifespan intervention can be read out in years rather than decades, in animals that share our environment and our age-related diseases. This site lays out, page by page and with sources, what the aging-research databases, the canine literature and the FDA's veterinary drug reviews actually hold for dogs. It is generated from a database, not written by a model: every figure sits next to the passage it came from.</p>
 <h2>Sections</h2>
 <ul>
+<li><a href="why-dogs.html">Why the path to human longevity runs through dogs</a>: the argument, every claim cited, with the years-to-answer chart and a calculator that sizes the same lifespan trial in dogs and in people.</li>
 <li><a href="interventions/index.html">Interventions</a>: for every compound the NIA Interventions Testing Program tested in mice ({n_itp_compounds}) plus veterinary comparators, the dog evidence and the gaps. {n_with_dog} of {n_itp_compounds} {'has' if n_with_dog == 1 else 'have'} a dog lifespan experiment on record.</li>
 <li><a href="trials/index.html">Canine aging trial registry</a>: {len(trial_records)} interventional studies and cohorts on aging in dogs, typed and quote-backed, including the company programs that have no publication.</li>
 <li><a href="fda-foi/index.html">FDA FOI summaries by ingredient</a>: {len(foi_index)} active ingredients, {n_foi} summaries for dog products, as typed records of dose, pharmacokinetics, target-animal safety, effectiveness and adverse reactions with verbatim quotes. The only public, regulator-reviewed source of canine PK and safety-margin data.</li>
@@ -532,6 +546,7 @@ def build(db: Path, out: Path) -> dict:
     # llms.txt, sitemap, robots
     llms = ["# Canine geroscience evidence", "",
             "> Source-linked, model-free evidence pages on aging research in companion dogs, generated from the dog-geroscience-mcp database. Every figure is shown with its verbatim quote and identifier (PMID, foi_id, NADA). Text CC BY 4.0; data per source.", "",
+            "## Start here", f"- [Why the path to human longevity runs through dogs]({BASE_URL}/why-dogs.html): the case for companion dogs as the route to human geroscience, every claim cited, with a trial-size calculator", "",
             "## Sections", f"- [Interventions]({BASE_URL}/interventions/index.html): the dog evidence for every NIA ITP compound",
             f"- [FDA FOI summaries by ingredient]({BASE_URL}/fda-foi/index.html): dose, PK, safety and effectiveness data from FDA CVM reviews of dog products",
             f"- [Canine aging trial registry]({BASE_URL}/trials/index.html): interventional studies and cohorts on aging in dogs, typed and quote-backed", "",
@@ -549,7 +564,7 @@ def build(db: Path, out: Path) -> dict:
     write(out, "sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
           + "".join(f"<url><loc>{BASE_URL}/{u}</loc><lastmod>{today}</lastmod></url>\n" for u in urls) + "</urlset>\n")
     write(out, "robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}/sitemap.xml\n")
-    return {"pages": len(urls), "interventions": len(inter_index), "ingredients": len(foi_index), "foi_records": len(rows), "trials": len(trial_records),
+    return {"pages": len(urls), "interventions": len(inter_index), "ingredients": len(foi_index), "foi_records": len(rows), "trials": len(trial_records), "why_dogs": wd_stats,
             "itp_compounds": n_itp_compounds, "with_dog_rows": n_with_dog, "with_corpus_mentions": n_with_corpus,
             "db_built_at": info.get("built_at")}
 

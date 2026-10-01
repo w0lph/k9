@@ -10,3 +10,6 @@ table{border-collapse:collapse;width:100%;font-size:.9rem;margin:.5em 0}th,td{bo
 q{quotes:'“' '”'}blockquote{margin:.4em 0 .8em;padding:.4em .8em;background:var(--q);border-left:3px solid var(--line);font-size:.92rem}
 footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);margin-top:2em}
 a{color:var(--link)}code{font-size:.9em}ul{padding-left:1.2em}section.record{margin-top:1.5em}
+figure{margin:1em 0}figure svg{max-width:100%;height:auto}figcaption{color:var(--muted);font-size:.85rem}
+.calc{border:1px solid var(--line);border-radius:6px;padding:.6em 1em;margin:1em 0}.calc label{display:inline-block;margin:.3em 1.2em .3em 0}.calc select,.calc input{font:inherit;padding:2px 4px}
+.refs{font-size:.88rem}.refs li{margin:.3em 0}sup a{text-decoration:none}

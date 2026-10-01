@@ -2,6 +2,9 @@
 
 > Source-linked, model-free evidence pages on aging research in companion dogs, generated from the dog-geroscience-mcp database. Every figure is shown with its verbatim quote and identifier (PMID, foi_id, NADA). Text CC BY 4.0; data per source.
 
+## Start here
+- [Why the path to human longevity runs through dogs](https://w0lph.github.io/k9/why-dogs.html): the case for companion dogs as the route to human geroscience, every claim cited, with a trial-size calculator
+
 ## Sections
 - [Interventions](https://w0lph.github.io/k9/interventions/index.html): the dog evidence for every NIA ITP compound
 - [FDA FOI summaries by ingredient](https://w0lph.github.io/k9/fda-foi/index.html): dose, PK, safety and effectiveness data from FDA CVM reviews of dog products
