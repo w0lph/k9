@@ -124,7 +124,7 @@ cd mcp && npx @anthropic-ai/mcpb validate mcpb/manifest.json && npx @anthropic-a
 ```
 
 ```bash
-gh release create mcp-v0.1.1 mcp/dist/dog-geroscience-mcp-0.1.1.mcpb --title "dog-geroscience-mcp 0.1.1" --notes "Claude Desktop extension bundle (.mcpb) for dog-geroscience-mcp 0.1.0."
+gh release create mcp-v0.1.1 mcp/dist/dog-geroscience-mcp-0.1.1.mcpb --title "dog-geroscience-mcp 0.1.1" --notes "Claude Desktop extension bundle (.mcpb) for dog-geroscience-mcp 0.1.1."
 ```
 
   Optional: submit the bundle to Anthropic's extension directory (Claude Desktop → Settings →
