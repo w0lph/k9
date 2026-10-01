@@ -234,6 +234,7 @@ def render(conn: sqlite3.Connection, inter_index: list[tuple], esc) -> tuple[str
 <li><a href="https://manifold.markets/w0lph/will-the-fda-conditionally-approve">Will the FDA conditionally approve a drug to extend lifespan or healthspan in dogs before 2028?</a> and its twin, <a href="https://manifold.markets/w0lph/will-the-fda-approve-any-drug-for-a">will the FDA approve any drug for an aging indication in humans before 2035?</a></li>
 <li><a href="https://manifold.markets/w0lph/will-the-triad-trial-report-that-ra">Will TRIAD report a significant lifespan extension from rapamycin in dogs by 2031?</a> and its twin, <a href="https://manifold.markets/w0lph/will-a-human-antiaging-drug-trial-w">will a human anti-aging drug trial with mortality or lifespan as its primary endpoint be registered before 2030?</a></li>
 <li><a href="https://manifold.markets/w0lph/will-loyal-report-that-loy002-met-t">Will Loyal report that LOY-002 met the STAY study's primary effectiveness endpoint by 2029?</a></li>
+<li><a href="https://manifold.markets/w0lph/which-species-will-get-the-first-re">Which species will get the first regulator-approved drug with lifespan extension as the indication?</a> Dogs, humans, another species, or none before 2035.</li>
 </ul>
 
 <h2>References</h2>
