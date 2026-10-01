@@ -71,7 +71,7 @@ def fresh(d: Path) -> Path:
         if not d.exists():
             break
         time.sleep(0.5)
-    if d.exists() and any(d.rglob("*")):
+    if d.exists() and any(p.is_file() for p in d.rglob("*")):  # empty leftover directories are fine
         raise RuntimeError(f"could not clear {d}")
     d.mkdir(parents=True, exist_ok=True)
     return d
