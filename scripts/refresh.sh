@@ -130,7 +130,7 @@ uv run --directory mcp python ../publish/hf_stage.py --owner "$HF_OWNER" --only 
 
 # ----------------------------------------------------------------------------- 5. site
 step "docs: evidence site"
-uv run --directory mcp python scripts/build_site.py | tee docs_build.json
+uv run --directory mcp --extra site python scripts/build_site.py | tee docs_build.json
 
 # ----------------------------------------------------------------------------- summary
 python3 - "$SUMMARY" "$new_records" "$published_records" "$foi_ok" "$STAGE_ONLY" <<'EOF'

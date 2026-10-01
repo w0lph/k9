@@ -39,6 +39,7 @@ from pathlib import Path
 
 from dog_geroscience_mcp import dossier, queries
 
+import og_images  # noqa: E402  (same directory)
 import why_dogs  # noqa: E402  (same directory)
 
 BASE_URL = "https://w0lph.github.io/k9"
@@ -103,9 +104,15 @@ BUILD_DATE = dt.date.today().isoformat()  # replaced by the database build date 
 
 
 def page(title: str, description: str, body: str, path: str, jsonld: dict | None = None, depth: int = 1,
-         head_extra: str = "") -> str:
+         head_extra: str = "", image: str = "og-default.png") -> str:
     root = "../" * depth if depth else "./"
     canonical = f"{BASE_URL}/{path}"
+    og = (f'<meta property="og:type" content="article">\n<meta property="og:title" content="{esc(title)}">\n'
+          f'<meta property="og:description" content="{esc(description)}">\n<meta property="og:url" content="{esc(canonical)}">\n'
+          f'<meta property="og:image" content="{BASE_URL}/{esc(image)}">\n<meta property="og:image:width" content="1200">\n'
+          f'<meta property="og:image:height" content="630">\n<meta property="og:site_name" content="Canine geroscience evidence">\n'
+          f'<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="{esc(title)}">\n'
+          f'<meta name="twitter:description" content="{esc(description)}">\n<meta name="twitter:image" content="{BASE_URL}/{esc(image)}">')
     ld = ""
     if jsonld:
         ld = f'<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>'
@@ -117,6 +124,7 @@ def page(title: str, description: str, body: str, path: str, jsonld: dict | None
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
 <link rel="canonical" href="{esc(canonical)}">
+{og}
 <link rel="stylesheet" href="{root}style.css">
 {head_extra}{ld}
 </head>
@@ -437,6 +445,9 @@ def build(db: Path, out: Path) -> dict:
     out.mkdir(parents=True, exist_ok=True)
     write(out, "style.css", CSS.strip() + "\n")
     write(out, ".nojekyll", "")
+    og_images.default_image(out / "og-default.png", "Canine geroscience evidence",
+                            "Source-linked pages on aging research in companion dogs: interventions, trials, FDA reviews, and why dogs are the route to human geroscience.",
+                            "w0lph.github.io/k9")
     verification_meta = ""
     if STATIC_DIR.is_dir():
         for f in sorted(STATIC_DIR.iterdir()):
@@ -513,8 +524,10 @@ def build(db: Path, out: Path) -> dict:
 
     # Why dogs: the canonical argument page
     wd_title, wd_desc, wd_body, wd_svg, wd_stats = why_dogs.render(conn, inter_index, esc)
+    why_dogs.preview_image(out / "og-why-dogs.png", wd_stats)
     write(out, "why-dogs.html", page(wd_title, wd_desc, wd_body, "why-dogs.html", {"@context": "https://schema.org", "@type": "Article", "headline": wd_title, "description": wd_desc,
-                                                                        "license": "https://creativecommons.org/licenses/by/4.0/", "isBasedOn": [u for _, _, u in why_dogs.REFS]}, depth=0))
+                                                                        "license": "https://creativecommons.org/licenses/by/4.0/", "isBasedOn": [u for _, _, u in why_dogs.REFS],
+                                                                        "image": f"{BASE_URL}/og-why-dogs.png"}, depth=0, image="og-why-dogs.png"))
     write(out, "why-dogs-years-to-answer.svg", wd_svg + chr(10))
     urls.append("why-dogs.html")
 

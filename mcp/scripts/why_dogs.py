@@ -16,6 +16,8 @@ import statistics
 
 from dog_geroscience_mcp import dossier
 
+import og_images
+
 # Annual probability of death by age interval for UK companion dogs, all breeds and both sexes,
 # Teng et al. 2022, Scientific Reports, Table 2 (VetCompass, 30,563 deaths 2016-2020).
 DOG_QX = {0: 0.017, 1: 0.016, 2: 0.016, 3: 0.017, 4: 0.020, 5: 0.024, 6: 0.033, 7: 0.047, 8: 0.069,
@@ -161,17 +163,33 @@ def itp_compounds(conn: sqlite3.Connection, inter_index: list[tuple]) -> list[di
 
 # ------------------------------------------------------------------ chart
 
-def years_chart(dog_median: float, human_median: float) -> str:
-    bars = [("Mice (ITP, rapamycin from 600 days)", 1.5, "last deaths about a year and a half after a start at 600 days", "harrison2009"),
-            (f"Dogs (from age 8)", dog_median, f"{dog_median:.1f} years until half the dogs have died", "teng2022"),
+def chart_bars(dog_median: float, human_median: float) -> list[tuple[str, float, str, str]]:
+    return [("Mice (ITP, rapamycin from 600 days)", 1.5, "last deaths about a year and a half after a start at 600 days", "harrison2009"),
+            ("Dogs (from age 8)", dog_median, f"{dog_median:.1f} years until half the dogs have died", "teng2022"),
             ("Rhesus monkeys (calorie restriction)", 20, "20-year longitudinal study", "colman2009"),
-            (f"People (from age 65)", human_median, f"{human_median:.0f} years until half the people have died", "who2019")]
+            ("People (from age 65)", human_median, f"{human_median:.0f} years until half the people have died", "who2019")]
+
+
+def preview_image(path, stats: dict) -> None:
+    """1200x630 PNG of the chart for link previews (generated once; delete the file to redraw)."""
+    dm, hm = stats["dog_median_from_8"], stats["human_median_from_65"]
+    bars = [("Mice (ITP)", 1.5, "about 1.5 years to the last deaths"),
+            ("Dogs (from age 8)", dm, f"{dm:.1f} years until half have died"),
+            ("Rhesus monkeys (CR)", 20.0, "20-year study"),
+            ("People (from age 65)", hm, f"{hm:.0f} years until half have died")]
+    og_images.years_chart_image(path, "Years from the first dose to a lifespan answer", bars,
+                                "Why the path to human longevity runs through dogs · w0lph.github.io/k9/why-dogs.html · CC BY 4.0")
+
+
+def years_chart(dog_median: float, human_median: float, with_title: bool = True) -> str:
+    bars = chart_bars(dog_median, human_median)
     w, h, left, top, rowh = 900, 40 + 46 * len(bars) + 30, 250, 36, 46
     maxv = 22
     scale = (w - left - 300) / maxv
-    parts = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" font-family="system-ui, sans-serif" font-size="14">',
-             f'<title>Years from the first dose to a lifespan answer</title>',
-             f'<text x="{left}" y="22" font-size="16" font-weight="600">Years from the first dose to a lifespan answer</text>']
+    parts = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" font-family="system-ui, sans-serif" font-size="14" role="img" aria-label="Years from the first dose to a lifespan answer">']
+    if with_title:
+        parts.append('<title>Years from the first dose to a lifespan answer</title>')
+    parts.append(f'<text x="{left}" y="22" font-size="16" font-weight="600">Years from the first dose to a lifespan answer</text>')
     for i, (label, v, note, _) in enumerate(bars):
         y = top + i * rowh
         fill = "#0b57d0" if label.startswith("Dogs") else "#9aa0a6"
@@ -196,7 +214,8 @@ def render(conn: sqlite3.Connection, inter_index: list[tuple], esc) -> tuple[str
     n_itp = len(compounds)
     n_itp_dog = sum(1 for c in compounds if c["n_corpus"])
     n_itp_lifespan = sum(1 for c in compounds if c["n_dog_lifespan"])
-    svg = years_chart(dog_med8, human_med65)
+    svg = years_chart(dog_med8, human_med65, with_title=True)      # standalone file
+    svg_inline = years_chart(dog_med8, human_med65, with_title=False)
     data = {"compounds": compounds, "dog_qx": DOG_QX, "human_q5": HUMAN_Q5, "dog_slope": bd, "human_slope": bh, "z": [Z_ALPHA, Z_BETA]}
 
     body = f"""<h1>Why the path to human longevity runs through dogs</h1>
@@ -204,7 +223,7 @@ def render(conn: sqlite3.Connection, inter_index: list[tuple], esc) -> tuple[str
 
 <h2>The clock problem</h2>
 <p>A lifespan intervention has to be judged on deaths. In mice that takes a year or two: the Interventions Testing Program's rapamycin result came from feeding genetically heterogeneous mice from 600 days of age and reading the age at which 90% had died, a 14% gain for females and 9% for males{cite("harrison2009")}. In rhesus monkeys the calorie-restriction answer took a 20-year longitudinal study{cite("colman2009", "mattison2012")}. In people, using the United States 2019 life table, half of a cohort enrolled at 65 is still alive {human_med65:.0f} years later{cite("who2019")}. In companion dogs, using the UK life table built from 30,563 deaths, half of a cohort enrolled at 8 has died after {dog_med8:.1f} years{cite("teng2022")}. A dog trial started this year has its lifespan answer within a single five-year grant period{cite("reporter_triad")}.</p>
-<figure>{svg}<figcaption>Years from the first dose to a lifespan answer, by species. <a href="why-dogs-years-to-answer.svg">SVG</a>, CC BY 4.0.</figcaption></figure>
+<figure>{svg_inline}<figcaption>Years from the first dose to a lifespan answer, by species. <a href="why-dogs-years-to-answer.svg">SVG</a>, CC BY 4.0.</figcaption></figure>
 
 <h2>What dogs share with us that mice do not</h2>
 <p>Companion dogs live in our homes, eat our food, breathe our air and have a sophisticated healthcare system of their own, and they develop the same age-related diseases, which is the rationale of the Dog Aging Project{cite("creevy2022")} and of the first rigorous test of a drug against biological aging with lifespan endpoints to be run outside a laboratory in any species{cite("triad2025")}. The domestic dog is among the most variable mammals in size, disease risk and life expectancy{cite("creevy2022")}: breeds span almost two orders of magnitude in body size and a twofold range in life expectancy, and the large breeds die young mainly because they age faster{cite("kraus2013")}. That is a natural experiment on growth and aging that no inbred laboratory strain offers.</p>

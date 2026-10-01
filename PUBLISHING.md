@@ -163,7 +163,7 @@ to its verbatim quote and identifier; the footer and sitemap carry the database 
 a rebuild from the same database is byte-identical.
 
 ```bash
-cd mcp && uv run python scripts/build_site.py && git add ../docs && git commit -m "docs: rebuild evidence site"
+cd mcp && uv run --extra site python scripts/build_site.py && git add ../docs && git commit -m "docs: rebuild evidence site"
 ```
 
 Pages serves `main:/docs` (enabled once with
