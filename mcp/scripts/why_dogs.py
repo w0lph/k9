@@ -228,6 +228,14 @@ def render(conn: sqlite3.Connection, inter_index: list[tuple], esc) -> tuple[str
 </div>
 <p class="notes">Model: a p% lifespan extension starting at age a delays mortality by a·p/(1+p) years; under Gompertz mortality fitted to each life table (dogs, ages 7-13{cite("teng2022")}; people, ages 60-84{cite("who2019")}) that delay is a constant hazard ratio; events needed follow Schoenfeld's formula at two-sided α = 0.05 and 80% power{cite("schoenfeld1983")}; participants are events divided by the control arm's cumulative mortality over the follow-up, with 1:1 allocation. With these defaults a 10% extension needs about {dog_t['participants']:,.0f} dogs over four years and about {hum_t['participants']:,.0f} people over the same four years, and the people are then still {human_med65 - 4:.0f} years short of a median-lifespan readout. Change the inputs; the arithmetic is in the page source.</p>
 
+<h2>Forecast it</h2>
+<p>Five play-money prediction markets put the same comparison to forecasters, in pairs: a dog question next to its human twin. Trade them on Manifold and the crowd's numbers appear here over time.</p>
+<ul>
+<li><a href="https://manifold.markets/w0lph/will-the-fda-conditionally-approve">Will the FDA conditionally approve a drug to extend lifespan or healthspan in dogs before 2028?</a> and its twin, <a href="https://manifold.markets/w0lph/will-the-fda-approve-any-drug-for-a">will the FDA approve any drug for an aging indication in humans before 2035?</a></li>
+<li><a href="https://manifold.markets/w0lph/will-the-triad-trial-report-that-ra">Will TRIAD report a significant lifespan extension from rapamycin in dogs by 2031?</a> and its twin, <a href="https://manifold.markets/w0lph/will-a-human-antiaging-drug-trial-w">will a human anti-aging drug trial with mortality or lifespan as its primary endpoint be registered before 2030?</a></li>
+<li><a href="https://manifold.markets/w0lph/will-loyal-report-that-loy002-met-t">Will Loyal report that LOY-002 met the STAY study's primary effectiveness endpoint by 2029?</a></li>
+</ul>
+
 <h2>References</h2>
 <ol class="refs">
 {''.join(f'<li id="ref-{k}">{esc(text)} <a href="{esc(url)}">{esc(url)}</a></li>' for k, text, url in REFS)}
