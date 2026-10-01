@@ -27,6 +27,7 @@ EXPECTED_TOOLS = {
     "foi_summary_search",
     "foi_summary_get",
     "foi_structured_search",
+    "canine_trial_search",
 }
 
 

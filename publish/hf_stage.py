@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+import time
 import sys
 from collections import Counter
 from pathlib import Path
@@ -64,8 +65,15 @@ released under CC BY 4.0.
 
 
 def fresh(d: Path) -> Path:
-    shutil.rmtree(d, ignore_errors=True)
-    d.mkdir(parents=True)
+    # OneDrive-synced folders delete asynchronously: retry until the tree is really gone.
+    for _ in range(20):
+        shutil.rmtree(d, ignore_errors=True)
+        if not d.exists():
+            break
+        time.sleep(0.5)
+    if d.exists() and any(d.rglob("*")):
+        raise RuntimeError(f"could not clear {d}")
+    d.mkdir(parents=True, exist_ok=True)
     return d
 
 
@@ -154,9 +162,21 @@ def stage_foi(owner: str) -> Path:
     dest = fresh(STAGE / "foi-summaries-dog")
     for f in ("foi_summaries_dog.jsonl", "structured_dog.jsonl", "dataset_version.json", "foi_index.jsonl"):
         shutil.copy2(src / f, dest / f)
-    shutil.copytree(src / "text", dest / "text")
+    shutil.copytree(src / "text", dest / "text", dirs_exist_ok=True)
     card("foi-summaries-dog", dest, owner)
     print(f"foi: {sum(1 for _ in (dest / 'text').iterdir())} text files")
+    return dest
+
+
+def stage_trials(owner: str) -> Path:
+    src = ROOT / "trials"
+    dest = fresh(STAGE / "canine-trial-registry")
+    for f in ("data/canine_trials.jsonl", "data/canine_trials.csv", "schema.json"):
+        shutil.copy2(src / f, dest / Path(f).name)
+    shutil.copytree(src / "data" / "sources", dest / "sources", dirs_exist_ok=True)
+    card("canine-trial-registry", dest, owner)
+    n = sum(1 for line in (src / "data" / "canine_trials.jsonl").open(encoding="utf-8") if line.strip())
+    print(f"trials: {n} records")
     return dest
 
 
@@ -169,6 +189,7 @@ def stage_mcp_data(owner: str) -> Path:
         foi_path=ROOT / "foi" / "data" / "foi_summaries_dog.jsonl",
         foi_structured_path=ROOT / "foi" / "data" / "structured_dog.jsonl",
         fulltext_licences=REDISTRIBUTABLE,
+        trials_path=ROOT / "trials" / "data" / "canine_trials.jsonl",
     )
     (dest / "build_summary.json").write_text(json.dumps(summary, indent=2, default=str), encoding="utf-8", newline="\n")
     card("dog-geroscience-mcp-data", dest, owner)
@@ -177,7 +198,7 @@ def stage_mcp_data(owner: str) -> Path:
     return dest
 
 
-STAGES = {"corpus": stage_corpus, "questions": stage_questions, "foi": stage_foi, "mcp-data": stage_mcp_data}
+STAGES = {"corpus": stage_corpus, "questions": stage_questions, "foi": stage_foi, "trials": stage_trials, "mcp-data": stage_mcp_data}
 
 
 def size_mb(d: Path) -> float:

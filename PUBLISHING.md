@@ -67,6 +67,7 @@ uv run --directory mcp python ../publish/hf_stage.py --owner w0lph
 | `canine-aging-corpus` | `records.jsonl`, `manifest.parquet`, `corpus_version.json`, `fulltext.parquet` + `fulltext/md/` (788 CC BY / CC0 articles), `fulltext_manifest.json` | ~60 MB |
 | `canine-geroscience-questions` | `canine_geroscience_v0_1.jsonl` (default), `canine_geroscience_v0.jsonl`, `schema.json` | < 1 MB |
 | `foi-summaries-dog` | `foi_summaries_dog.jsonl`, `structured_dog.jsonl`, `foi_index.jsonl`, `dataset_version.json`, `text/` | ~30 MB |
+| `canine-trial-registry` | `canine_trials.jsonl`, `canine_trials.csv`, `schema.json`, `sources/` (web snapshots, Europe PMC abstracts) | < 1 MB |
 | `dog-geroscience-mcp-data` | `dog_geroscience.sqlite`, `build_summary.json` (viewer disabled) | ~90 MB |
 
 Then prove the first-run download works from a clean directory (this is what every PyPI

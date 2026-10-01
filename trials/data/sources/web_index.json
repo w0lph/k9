@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "dvm360-stay-enrollment",
+    "url": "https://www.dvm360.com/view/clinical-trial-for-longevity-drug-meets-goal-of-enrolling-1000-dogs",
+    "status": 200,
+    "chars": 8304,
+    "sha256": "16d4930d4abd486e93854f03ee14f880a06d7322b02c253b900a76a45293fc69",
+    "retrieved_at": "2026-10-01T14:22:57+00:00"
+  },
+  {
+    "slug": "dvm360-stay-milestone",
+    "url": "https://www.dvm360.com/view/lifespan-extension-drug-in-development-for-senior-dogs-reaches-a-new-milestone",
+    "status": 200,
+    "chars": 8439,
+    "sha256": "c7581ffb28f5957e902f1af7eaf0e4147d25febb64e17235cceb66a642c7dd02",
+    "retrieved_at": "2026-10-01T14:22:58+00:00"
+  },
+  {
+    "slug": "yahoo-loyal-safety-acceptance",
+    "url": "https://finance.yahoo.com/news/loyal-receives-fda-acceptance-safety-140000887.html",
+    "status": 200,
+    "chars": 6325,
+    "sha256": "8db4b42cdac5c0156daeaf7357b5ae327ab055893ea64c986a82ebff459a2113",
+    "retrieved_at": "2026-10-01T14:23:02+00:00"
+  },
+  {
+    "slug": "gizmodo-loy-001",
+    "url": "https://gizmodo.com/loyal-drug-loy-001-extend-lifespan-giant-dog-breed-fda-1851055513",
+    "status": 200,
+    "chars": 7991,
+    "sha256": "1b75a6010eb347fdc9f43311029cb02d781b880cef2c8fa170d0970db4ccc3b7",
+    "retrieved_at": "2026-10-01T14:23:03+00:00"
+  },
+  {
+    "slug": "loyal-for-dog-owners",
+    "url": "https://loyal.com/for-dog-owners",
+    "status": 200,
+    "chars": 9212,
+    "sha256": "cf27ad693032956882d38a938f26b2afc7ef3aae95079f71ba2b628684bc0a7e",
+    "retrieved_at": "2026-10-01T14:23:04+00:00"
+  },
+  {
+    "slug": "loyal-products-in-development-2024-08",
+    "url": "https://loyal.com/downloads/Loyal-products-in-development-August-2024.pdf",
+    "status": 200,
+    "chars": 13631,
+    "sha256": "64a8b3e8557cee306052e876dbd6b509c849e95e7b4e1e5ef3ecd9df8537d599",
+    "retrieved_at": "2026-10-01T14:23:06+00:00"
+  }
+]

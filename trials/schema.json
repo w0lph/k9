@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/w0lph/k9/trials/schema.json",
+  "title": "Canine aging trial registry record",
+  "description": "One interventional study or longitudinal cohort in dogs whose stated purpose is to modify or measure aging (lifespan, healthspan, cognitive or functional decline with age, immunosenescence, age-related organ decline, or cancer prevention in older dogs). Every factual field is backed by at least one source, and every quote is verbatim from the cited source text held in this repository or in the canine-aging-corpus.",
+  "type": "object",
+  "required": ["id", "name", "kind", "status", "population", "sources", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9-]+$", "description": "Stable slug, e.g. triad-rapamycin, purina-lifetime-diet-restriction."},
+    "name": {"type": "string", "description": "Short descriptive name as the registry shows it."},
+    "acronym": {"type": ["string", "null"], "description": "Acronym or code name as used by the investigators (TRIAD, STAY, LOY-002)."},
+    "kind": {"type": "string", "enum": ["randomized_controlled_trial", "controlled_trial", "single_arm_trial", "crossover_trial", "pilot_study", "longitudinal_cohort", "regulatory_program"],
+             "description": "Design as the source states it; regulatory_program for company-run programs known only from company and press sources."},
+    "status": {"type": "string", "enum": ["completed", "ongoing", "planned", "unknown"]},
+    "setting": {"type": ["string", "null"], "enum": ["laboratory_colony", "client_owned", "mixed", null]},
+    "intervention": {"type": ["string", "null"], "description": "Intervention(s) as named by the source; null for cohorts."},
+    "intervention_class": {"type": ["string", "null"], "enum": ["drug", "diet_restriction", "diet_or_supplement", "behavioral_or_environmental", "cell_or_gene_therapy", "vaccine", "combination", null, "none"]},
+    "comparator": {"type": ["string", "null"], "description": "Placebo, control diet, no treatment, etc., as stated."},
+    "dose_regimen": {"type": ["string", "null"], "description": "Dose, route and frequency exactly as reported."},
+    "duration": {"type": ["string", "null"], "description": "Treatment or follow-up duration as reported."},
+    "population": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "n": {"type": ["integer", "null"], "description": "Dogs enrolled or analysed, as reported."},
+        "n_note": {"type": ["string", "null"], "description": "What n counts (enrolled, randomized, analysed) or arm sizes."},
+        "breed": {"type": ["string", "null"]},
+        "age": {"type": ["string", "null"], "description": "Age range or description as reported."},
+        "other": {"type": ["string", "null"]}
+      }
+    },
+    "primary_outcome": {"type": ["string", "null"], "description": "Primary endpoint or main outcome measured, as reported."},
+    "result": {"type": ["string", "null"], "description": "Main result as the source states it, including significance wording; null if not yet reported."},
+    "lead_organization": {"type": ["string", "null"]},
+    "sponsor_or_funder": {"type": ["string", "null"]},
+    "registration": {"type": ["array"], "items": {"type": "object", "required": ["registry", "id"], "additionalProperties": false,
+                     "properties": {"registry": {"type": "string"}, "id": {"type": "string"}, "url": {"type": ["string", "null"]}}}},
+    "start_year": {"type": ["integer", "null"]},
+    "end_year": {"type": ["integer", "null"]},
+    "sources": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["type", "quotes"], "additionalProperties": false,
+        "properties": {
+          "type": {"type": "string", "enum": ["pmid", "web", "europepmc"], "description": "pmid: a canine-aging-corpus record (abstract, or full text if fulltext_md is true); web: a snapshot under trials/data/sources/web/<slug>.txt; europepmc: an abstract under trials/data/sources/europepmc/pmid_<pmid>.json."},
+          "pmid": {"type": ["string", "null"]},
+          "slug": {"type": ["string", "null"], "description": "Web snapshot slug."},
+          "doi": {"type": ["string", "null"]},
+          "title": {"type": ["string", "null"]},
+          "year": {"type": ["integer", "null"]},
+          "role": {"type": ["string", "null"], "description": "What the source contributes: design, results, follow-up, press, company."},
+          "quotes": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 20}, "description": "Verbatim sentences supporting the fields; checked by the validator."},
+          "quote_scope": {"type": ["string", "null"], "enum": ["abstract", "fulltext", "web", null]}
+        }
+      }
+    },
+    "summary": {"type": "string", "description": "Two to four plain sentences stating design, population, intervention, outcome and result, each supportable by the quotes."},
+    "notes": {"type": ["string", "null"], "description": "Caveats: company-sourced facts, preprint status, sub-studies of a parent study."},
+    "parent_id": {"type": ["string", "null"], "description": "id of the parent study when this record is a sub-study or follow-up."},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "extracted_by": {"type": ["string", "null"]}
+  }
+}

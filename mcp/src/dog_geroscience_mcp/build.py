@@ -343,8 +343,44 @@ def _load_foi_structured(conn: sqlite3.Connection, path: Path | None) -> dict:
     return {"records": n, "path": str(path)}
 
 
+def _load_trials(conn: sqlite3.Connection, path: Path | None) -> dict:
+    """Canine aging trial registry (canine-trials ``canine_trials.jsonl``): one row per study with
+    the searchable fields flattened and the full record kept as JSON."""
+    if not path or not path.exists():
+        log.info("no trial registry at %s; skipping", path)
+        return {}
+    conn.execute("DROP TABLE IF EXISTS trials")
+    conn.execute(
+        """CREATE TABLE trials (
+            id TEXT PRIMARY KEY, name TEXT, acronym TEXT, kind TEXT, status TEXT, setting TEXT,
+            intervention TEXT, intervention_class TEXT, comparator TEXT, start_year INTEGER, end_year INTEGER,
+            n INTEGER, breed TEXT, age TEXT, primary_outcome TEXT, result TEXT, lead_organization TEXT,
+            tags TEXT, pmids TEXT, summary TEXT, record TEXT)"""
+    )
+    n = 0
+    with path.open("r", encoding="utf-8") as fh:
+        for line in fh:
+            if not line.strip():
+                continue
+            r = json.loads(line)
+            pop = r.get("population") or {}
+            pmids = ";".join(str(s.get("pmid")) for s in r.get("sources") or [] if s.get("pmid"))
+            conn.execute(
+                "INSERT OR REPLACE INTO trials VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                (
+                    r["id"], r.get("name"), r.get("acronym"), r.get("kind"), r.get("status"), r.get("setting"),
+                    r.get("intervention"), r.get("intervention_class"), r.get("comparator"), r.get("start_year"), r.get("end_year"),
+                    pop.get("n"), pop.get("breed"), pop.get("age"), r.get("primary_outcome"), r.get("result"),
+                    r.get("lead_organization"), ";".join(r.get("tags") or []), pmids, r.get("summary"), json.dumps(r, ensure_ascii=False),
+                ),
+            )
+            n += 1
+    return {"records": n, "path": str(path)}
+
+
 def build_db(raw_dir: Path, corpus_dir: Path, db_path: Path, foi_path: Path | None = None,
-             foi_structured_path: Path | None = None, fulltext_licences: set[str] | None = None) -> dict:
+             foi_structured_path: Path | None = None, fulltext_licences: set[str] | None = None,
+             trials_path: Path | None = None) -> dict:
     db_path.parent.mkdir(parents=True, exist_ok=True)
     tmp = db_path.with_suffix(".building.sqlite")
     if tmp.exists():
@@ -358,6 +394,7 @@ def build_db(raw_dir: Path, corpus_dir: Path, db_path: Path, foi_path: Path | No
             "corpus": _load_corpus(conn, corpus_dir, fulltext_licences),
             "foi": _load_foi(conn, foi_path),
             "foi_structured": _load_foi_structured(conn, foi_structured_path),
+            "trials": _load_trials(conn, trials_path),
         }
         dl = raw_dir / "download_manifest.json"
         summary["downloads"] = json.loads(dl.read_text(encoding="utf-8")) if dl.exists() else {}

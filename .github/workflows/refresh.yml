@@ -58,7 +58,7 @@ jobs:
       - name: Upload datasets to the Hugging Face Hub
         if: env.HF_TOKEN != '' && (github.event_name != 'workflow_dispatch' || inputs.upload)
         run: |
-          for name in $(python3 -c 'import json; print(" ".join({"corpus": "canine-aging-corpus", "foi": "foi-summaries-dog", "mcp-data": "dog-geroscience-mcp-data"}[s] for s in json.load(open("refresh_summary.json"))["staged"]))'); do
+          for name in $(python3 -c 'import json; print(" ".join({"corpus": "canine-aging-corpus", "foi": "foi-summaries-dog", "trials": "canine-trial-registry", "mcp-data": "dog-geroscience-mcp-data"}[s] for s in json.load(open("refresh_summary.json"))["staged"]))'); do
             echo "uploading $name"
             uvx --from huggingface_hub hf upload "$HF_OWNER/$name" "publish/stage/$name" . --repo-type dataset --commit-message "Monthly refresh $(date -u +%Y-%m-%d)"
           done

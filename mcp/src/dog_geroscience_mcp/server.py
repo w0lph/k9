@@ -264,6 +264,19 @@ def create_server(db_path: Path = DB_PATH, corpus_dir: Path = CORPUS_DIR, foi_pa
         return queries.foi_structured_search(_state(ctx).conn, query, limit)
 
     @mcp.tool()
+    def canine_trial_search(ctx: Context, query: str = "", limit: int = 10, trial_id: str | None = None,
+                            status: str | None = None) -> list[dict]:
+        """Registry of interventional studies and longitudinal cohorts on aging in dogs (lifespan,
+        healthspan, cognition, mobility, immunosenescence, organ decline, cancer prevention in
+        older dogs), including company programs such as the STAY study of LOY-002 and the Dog
+        Aging Project's TRIAD trial. Each record is typed (design, status, intervention, dose,
+        duration, population, primary outcome, result as reported, organisation, sources) and every
+        field is backed by a verbatim quote from the cited abstract, full text or snapshot, checked
+        by a validator. Match on name, acronym, intervention, summary, tags or PMID; pass trial_id
+        for one record; status filters completed/ongoing/planned."""
+        return queries.trial_search(_state(ctx).conn, query, limit, trial_id=trial_id, status=status)
+
+    @mcp.tool()
     def foi_summary_search(ctx: Context, query: str, limit: int = 10) -> list[dict]:
         """FDA Freedom of Information summaries for approved dog products whose ingredient,
         proprietary name or indication matches the query: application number, sponsor, approval

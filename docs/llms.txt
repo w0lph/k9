@@ -5,6 +5,46 @@
 ## Sections
 - [Interventions](https://w0lph.github.io/k9/interventions/index.html): the dog evidence for every NIA ITP compound
 - [FDA FOI summaries by ingredient](https://w0lph.github.io/k9/fda-foi/index.html): dose, PK, safety and effectiveness data from FDA CVM reviews of dog products
+- [Canine aging trial registry](https://w0lph.github.io/k9/trials/index.html): interventional studies and cohorts on aging in dogs, typed and quote-backed
+
+## Trials and cohorts
+- [L-deprenyl 1 mg/kg daily versus placebo survival study in 82 paired beagles](https://w0lph.github.io/k9/trials/l-deprenyl-beagle-survival-1997.html): controlled trial, completed
+- [Selegiline hydrochloride (Anipryl) in dogs with cognitive dysfunction syndrome: noncomparative open-label study](https://w0lph.github.io/k9/trials/selegiline-cds-open-label-2001.html): single-arm trial, completed
+- [Dietary n-6:n-3 fatty acid ratio and vitamin E on immune response and T cell subpopulations of healthy geriatric Beagles](https://w0lph.github.io/k9/trials/n6-n3-fatty-acids-vitamin-e-immune-geriatric-beagles-2003.html): controlled trial, completed
+- [Prior experience, antioxidants and mitochondrial cofactors in aged beagles (landmark discrimination)](https://w0lph.github.io/k9/trials/beagle-antioxidant-cofactor-landmark-discrimination-2004.html): randomized controlled trial, completed
+- [Panax Ginseng with brewers' yeast (Gerivet) as a stimulant for geriatric dogs](https://w0lph.github.io/k9/trials/ginseng-brewers-yeast-gerivet-geriatric-dogs-2007.html): randomized controlled trial, completed
+- [Nutraceutical supplement (phosphatidylserine, Ginkgo biloba, vitamin E, pyridoxine) for short-term memory in aged beagles](https://w0lph.github.io/k9/trials/beagle-phosphatidylserine-ginkgo-nutraceutical-crossover-2008.html): crossover trial, completed
+- [S-adenosylmethionine (Novifit) for age-related mental decline in dogs: double-blinded placebo-controlled trial](https://w0lph.github.io/k9/trials/same-cognitive-decline-rct-2008.html): randomized controlled trial, completed
+- [Antioxidant-fortified diet and behavioral enrichment in aged beagles (longitudinal study)](https://w0lph.github.io/k9/trials/beagle-antioxidant-diet-behavioral-enrichment.html): controlled trial, completed
+- [Lifetime 25% diet restriction paired-feeding study in 48 Labrador Retrievers](https://w0lph.github.io/k9/trials/purina-lifetime-diet-restriction.html): randomized controlled trial, completed
+- [Autologous skin-derived neural precursor (SKN) cell therapy for canine cognitive dysfunction in older companion dogs (DOGS + CELLS trial)](https://w0lph.github.io/k9/trials/skn-cell-therapy-canine-cognitive-dysfunction-sydney-2022.html): single-arm trial, completed
+- [Golden Retriever Lifetime Study (Morris Animal Foundation)](https://w0lph.github.io/k9/trials/golden-retriever-lifetime-study.html): longitudinal cohort, ongoing
+- [Medium-chain triglyceride, fish oil and L-carnitine enriched foods against age-associated serum fatty acid and carnitine changes in healthy Beagles](https://w0lph.github.io/k9/trials/mct-fish-oil-carnitine-beagles-serum-aging-2012.html): randomized controlled trial, completed
+- [Dietary astaxanthin and age-associated mitochondrial dysfunction in young and geriatric Beagles](https://w0lph.github.io/k9/trials/astaxanthin-mitochondrial-function-beagles-2013.html): controlled trial, completed
+- [N-acetyl-D-mannosamine (ManNAc) for age-related decline in place learning in dogs](https://w0lph.github.io/k9/trials/mannac-place-learning-crossover-2014.html): crossover trial, completed
+- [Renal protective foods with functional food bioactives against age-associated decline in renal function (Hill's geriatric Beagle colony)](https://w0lph.github.io/k9/trials/hills-functional-foods-renal-function-geriatric-colony-2016.html): randomized controlled trial, completed
+- [Test food designed to promote healthy aging vs owner's-choice foods on serum SDMA and creatinine in client-owned geriatric dogs](https://w0lph.github.io/k9/trials/hills-test-food-sdma-client-owned-geriatric-dogs-2016.html): randomized controlled trial, completed
+- [Aβ vaccination combined with behavioral enrichment in aged beagles](https://w0lph.github.io/k9/trials/beagle-abeta-vaccination-behavioral-enrichment.html): controlled trial, completed
+- [Longitudinal analysis of inflammation, immune function and oxidative stress markers in 80 Labrador retrievers from adulthood to end of life](https://w0lph.github.io/k9/trials/labrador-inflammaging-cohort-2018.html): longitudinal cohort, completed
+- [Diet enriched with antioxidants, mitochondrial cofactors and omega-3 fatty acids on telomere length and joint mobility in young and old shepherd dogs](https://w0lph.github.io/k9/trials/antioxidant-omega3-enriched-diet-telomere-mobility-shepherd-dogs-2020.html): randomized controlled trial, completed
+- [Test of Rapamycin in Aging Dogs (TRIAD)](https://w0lph.github.io/k9/trials/triad-rapamycin.html): randomized controlled trial, ongoing
+- [Ashwagandha (Withania somnifera) root extract on aging-related changes in healthy geriatric client-owned dogs](https://w0lph.github.io/k9/trials/ashwagandha-geriatric-labradors-rct-2024.html): randomized controlled trial, completed
+- [Fortetropin in geriatric and senior dogs with reduced mobility](https://w0lph.github.io/k9/trials/fortetropin-senior-dogs-mobility-rct-2022.html): randomized controlled trial, completed
+- [LY-D6/2 senolytic and NAD+ precursor combination in senior companion dogs with mild to moderate cognitive impairment](https://w0lph.github.io/k9/trials/ly-d6-2-senolytic-nad-precursor-senior-dogs-rct-2024.html): randomized controlled trial, completed
+- [Cow placenta extract (CPE) on cognitive function and oxidative stress in aged client-owned dogs](https://w0lph.github.io/k9/trials/cow-placenta-extract-cognition-aged-dogs-rct-2026.html): randomized controlled trial, completed
+- [Dog Aging Project (DAP) long-term longitudinal study of ageing in companion dogs](https://w0lph.github.io/k9/trials/dog-aging-project.html): longitudinal cohort, ongoing
+- [OLD-DOG Project: 30-month prospective biomarkers-of-aging cohort of 209 companion dogs (University of Padua)](https://w0lph.github.io/k9/trials/old-dog-padua-cohort.html): longitudinal cohort, ongoing
+- [Short-term (10-week) rapamycin randomized controlled trial in 24 middle-aged companion dogs](https://w0lph.github.io/k9/trials/rapamycin-10-week-rct-2017.html): randomized controlled trial, completed
+- [Six-month low-dose rapamycin masked placebo-controlled randomized trial in 17 healthy client-owned dogs (Texas A&M)](https://w0lph.github.io/k9/trials/rapamycin-6-month-rct-tamu-2023.html): randomized controlled trial, completed
+- [Ashwagandha root extract on gut parameters in healthy geriatric research Beagles](https://w0lph.github.io/k9/trials/ashwagandha-gut-parameters-geriatric-beagles-rct-2024.html): randomized controlled trial, completed
+- [Behavioral enrichment with tacrolimus or Q134R in middle-aged beagles: longitudinal MRI brain atrophy study](https://w0lph.github.io/k9/trials/beagle-middle-aged-enrichment-tacrolimus-q134r-brain-atrophy.html): longitudinal cohort, completed
+- [STAY study: LOY-002 for healthy lifespan extension in senior dogs (Loyal)](https://w0lph.github.io/k9/trials/loyal-stay-loy-002.html): company regulatory program, ongoing
+- [Vaccination Against Canine Cancer Study (VACCS)](https://w0lph.github.io/k9/trials/vaccs-cancer-preventative-vaccine.html): randomized controlled trial, ongoing
+- [Dog Aging Project Precision cohort (multi-omic longitudinal sub-cohort of 1,000 dogs)](https://w0lph.github.io/k9/trials/dog-aging-project-precision-cohort.html): longitudinal cohort, ongoing
+- [EF-M2 (Immutalon) macrophage glyco-modulation for activity and vitality in aging companion dogs (GERI-VITAL-DOG)](https://w0lph.github.io/k9/trials/ef-m2-immutalon-geri-vital-dog-rct-2025.html): randomized controlled trial, completed
+- [Human embryonic stem cell-derived MSCs and MSC extracellular vesicles in geriatric small dogs with cognitive and behavioral changes (pilot)](https://w0lph.github.io/k9/trials/es-msc-and-ev-geriatric-small-dogs-cognition-mobility-pilot-2025.html): pilot study, completed
+- [LOY-001: IGF-1-lowering long-acting injection for large and giant breed dogs (Loyal)](https://w0lph.github.io/k9/trials/loyal-loy-001-large-dogs.html): company regulatory program, ongoing
+- [LOY-003: IGF-1-lowering daily pill for large breed dogs (Loyal)](https://w0lph.github.io/k9/trials/loyal-loy-003-large-dogs-pill.html): company regulatory program, ongoing
 
 ## Interventions
 - [(R/S)-1,3-butanediol](https://w0lph.github.io/k9/interventions/r-s-1-3-butanediol.html): 2 ITP rows, 0 dog lifespan rows, 0 canine papers, 0 FDA FOI summaries
@@ -230,5 +270,6 @@
 - [canine-aging-corpus](https://huggingface.co/datasets/w0lph/canine-aging-corpus)
 - [foi-summaries-dog](https://huggingface.co/datasets/w0lph/foi-summaries-dog)
 - [dog-geroscience-mcp-data](https://huggingface.co/datasets/w0lph/dog-geroscience-mcp-data)
+- [canine-trial-registry](https://huggingface.co/datasets/w0lph/canine-trial-registry)
 - [canine-geroscience-questions](https://huggingface.co/datasets/w0lph/canine-geroscience-questions)
 - [dog-geroscience-mcp source](https://github.com/w0lph/k9/tree/main/mcp)

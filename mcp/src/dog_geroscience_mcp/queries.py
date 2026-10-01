@@ -268,6 +268,42 @@ def foi_structured_search(conn: sqlite3.Connection, query: str, limit: int = 10)
     return out
 
 
+# -- Trial registry ---------------------------------------------------------------
+
+
+def trial_search(conn: sqlite3.Connection, query: str = "", limit: int = 10, trial_id: str | None = None,
+                 status: str | None = None) -> list[dict]:
+    """Canine aging trial registry records. ``query`` matches name, acronym, intervention,
+    summary, tags or cited PMIDs (substring, case-insensitive); ``trial_id`` fetches one record;
+    ``status`` filters (completed, ongoing, planned, unknown). Returns the full typed records
+    with their verbatim source quotes."""
+    if not has_table(conn, "trials"):
+        return []
+    if trial_id:
+        rows = conn.execute("SELECT record FROM trials WHERE id = ?", (trial_id,)).fetchall()
+    else:
+        q = f"%{(query or '').strip()}%"
+        sql = ("SELECT record FROM trials WHERE (name LIKE ? OR acronym LIKE ? OR intervention LIKE ? OR summary LIKE ? "
+               "OR tags LIKE ? OR pmids LIKE ? OR kind LIKE ?)")
+        params: list = [q, q, q, q, q, q, q]
+        if status:
+            sql += " AND status = ?"
+            params.append(status)
+        sql += " ORDER BY COALESCE(start_year, end_year, 0) DESC, name LIMIT ?"
+        params.append(limit)
+        rows = conn.execute(sql, params).fetchall()
+    return [json.loads(r[0]) for r in rows]
+
+
+def trial_stats(conn: sqlite3.Connection) -> dict:
+    if not has_table(conn, "trials"):
+        return {"records": 0}
+    out = {"records": conn.execute("SELECT COUNT(*) FROM trials").fetchone()[0]}
+    for col in ("kind", "status", "intervention_class"):
+        out[col] = {k or "null": v for k, v in conn.execute(f"SELECT {col}, COUNT(*) FROM trials GROUP BY {col}")}
+    return out
+
+
 # -- Corpus -----------------------------------------------------------------------
 
 

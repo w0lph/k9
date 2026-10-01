@@ -14,6 +14,8 @@ Pages:
     fda-foi/index.html             every ingredient with an FDA CVM FOI summary for a dog product
     fda-foi/<slug>.html            products, dose regimen, PK values, target-animal safety,
                                    effectiveness, adverse reactions, each with its quote
+    trials/index.html              the canine aging trial registry (trials/data/canine_trials.jsonl)
+    trials/<id>.html               one typed record per study with its verbatim source quotes
     llms.txt, sitemap.xml, robots.txt
 
 Files in scripts/site_static/ (search-engine verification files such as google<token>.html or
@@ -39,6 +41,10 @@ from dog_geroscience_mcp import dossier, queries
 
 BASE_URL = "https://w0lph.github.io/k9"
 STATIC_DIR = Path(__file__).resolve().parent / "site_static"
+TRIALS_PATH = Path(__file__).resolve().parents[2] / "trials" / "data" / "canine_trials.jsonl"
+KIND_LABEL = {"randomized_controlled_trial": "randomized controlled trial", "controlled_trial": "controlled trial",
+              "single_arm_trial": "single-arm trial", "crossover_trial": "crossover trial", "pilot_study": "pilot study",
+              "longitudinal_cohort": "longitudinal cohort", "regulatory_program": "company regulatory program"}
 REPO = "https://github.com/w0lph/k9"
 HF = "https://huggingface.co/datasets/w0lph"
 VET_COMPARATORS = ["Selegiline", "Carprofen"]
@@ -117,6 +123,7 @@ def page(title: str, description: str, body: str, path: str, jsonld: dict | None
 <a href="{root}index.html">Canine geroscience evidence</a> ·
 <a href="{root}interventions/index.html">Interventions</a> ·
 <a href="{root}fda-foi/index.html">FDA FOI summaries</a> ·
+<a href="{root}trials/index.html">Trial registry</a> ·
 <a href="{REPO}">Source</a>
 </nav></header>
 <main>
@@ -150,7 +157,8 @@ DOSE_COLS = [
 ]
 
 
-def render_intervention(conn: sqlite3.Connection, compound: str, ingredient_slugs: dict[str, str]) -> tuple[str, str, dict]:
+def render_intervention(conn: sqlite3.Connection, compound: str, ingredient_slugs: dict[str, str],
+                        trial_records: list[dict] | None = None) -> tuple[str, str, dict]:
     d = dossier.build_dossier(conn, compound, include_openfda=False, corpus_limit=15)
     da, corp = d["drugage"], d["corpus"]
     by_species = ", ".join(f"{esc(k)} {v}" for k, v in sorted(da["by_species"].items(), key=lambda kv: -kv[1])) or "none"
@@ -194,6 +202,14 @@ def render_intervention(conn: sqlite3.Connection, compound: str, ingredient_slug
         for h in hits:
             parts.append(f"<li>{esc(h.get('title'))} ({esc(h.get('journal'))}, {esc(h.get('year'))}). {pubmed(h.get('pmid'), h.get('doi'))}</li>")
         parts.append("</ul>")
+
+    matched = trials_for_compound(trial_records or [], d["names_searched"])
+    parts.append("<h2>Trials and cohorts in the canine aging trial registry</h2>")
+    if matched:
+        parts.append("<ul>" + "".join(f'<li><a href="../trials/{esc(t["id"])}.html">{esc(t["name"])}</a> ({esc(t.get("status"))})'
+                                      + (f": {esc(t['result'])}" if t.get("result") else "") + "</li>" for t in matched) + "</ul>")
+    else:
+        parts.append("<p class=\"none\">No registered study of this compound in dogs.</p>")
 
     parts.append("<h2>FDA CVM FOI summaries for dog products</h2>")
     if foi:
@@ -296,6 +312,99 @@ def render_ingredient(name: str, records: list[dict]) -> tuple[str, str, str, di
     return title, desc, "\n".join(parts), {"jsonld": ld, "n_records": len(records), "n_pk": n_pk, "n_ar": n_ar, "species": species}
 
 
+# ------------------------------------------------------------------ trial registry
+
+def source_link(src: dict) -> str:
+    if src.get("type") in ("pmid", "europepmc") and src.get("pmid"):
+        label = esc(src.get("title") or f"PMID {src['pmid']}")
+        return f'{label} ({esc(src.get("year"))}) {pubmed(src["pmid"], src.get("doi"))}'
+    if src.get("type") == "web":
+        return f'{esc(src.get("title") or src.get("slug"))} ({esc(src.get("year"))}), snapshot <code>{esc(src.get("slug"))}</code>'
+    return esc(src.get("title") or "")
+
+
+def render_trial(r: dict, all_ids: set[str]) -> tuple[str, str, str, dict]:
+    pop = r.get("population") or {}
+    kind = KIND_LABEL.get(r.get("kind"), r.get("kind"))
+    parts = [f"<h1>{esc(r['name'])}</h1>",
+             f"<p class=\"lede\">{esc(r.get('summary'))}</p>"]
+    facts = [("Design", kind), ("Status", r.get("status")), ("Setting", (r.get("setting") or "").replace("_", " ") or None),
+             ("Intervention", r.get("intervention")), ("Intervention class", (r.get("intervention_class") or "").replace("_", " ") or None),
+             ("Comparator", r.get("comparator")), ("Dose regimen", r.get("dose_regimen")), ("Duration", r.get("duration")),
+             ("Dogs", f"{pop.get('n'):,}" if pop.get("n") else None), ("Population note", pop.get("n_note")), ("Breed", pop.get("breed")),
+             ("Age", pop.get("age")), ("Other", pop.get("other")), ("Primary outcome", r.get("primary_outcome")),
+             ("Result (as reported)", r.get("result")), ("Lead organisation", r.get("lead_organization")),
+             ("Sponsor or funder", r.get("sponsor_or_funder")), ("Start year", r.get("start_year")), ("End year", r.get("end_year")),
+             ("Registrations", ", ".join(f"{x.get('registry')} {x.get('id')}" for x in r.get("registration") or []) or None),
+             ("Parent study", f'<a href="{esc(r["parent_id"])}.html">{esc(r["parent_id"])}</a>' if r.get("parent_id") in all_ids else None),
+             ("Tags", ", ".join(r.get("tags") or []) or None)]
+    parts.append("<h2>Record</h2><table><tbody>" + "".join(
+        f"<tr><th>{esc(k)}</th><td>{v if k == 'Parent study' else esc(v)}</td></tr>" for k, v in facts if v not in (None, "")) + "</tbody></table>")
+    if r.get("notes"):
+        parts.append(f"<p class=\"notes\">Notes: {esc(r['notes'])}</p>")
+    parts.append("<h2>Sources and verbatim quotes</h2>")
+    for src in r.get("sources") or []:
+        parts.append(f"<h3>{source_link(src)}" + (f" <small>({esc(src.get('role'))})</small>" if src.get("role") else "") + "</h3>")
+        parts.append("<ul>" + "".join(f"<li><q>{esc(q)}</q></li>" for q in src.get("quotes") or []) + "</ul>")
+    parts.append(f"<p class=\"repro\">Reproduce: <code>canine_trial_search(trial_id=\"{esc(r['id'])}\")</code> in dog-geroscience-mcp; "
+                 f"dataset <a href=\"{HF}/canine-trial-registry\">canine-trial-registry</a>.</p>")
+    title = f"{r['name']}: canine aging trial registry record"
+    desc = (r.get("summary") or "")[:300]
+    ld = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "description": desc,
+          "about": {"@type": "MedicalStudy", "name": r["name"], "status": r.get("status")},
+          "license": "https://creativecommons.org/licenses/by/4.0/", "isBasedOn": f"{HF}/canine-trial-registry"}
+    return title, desc, "\n".join(parts), {"jsonld": ld}
+
+
+def build_trials(out: Path, urls: list[str]) -> list[dict]:
+    if not TRIALS_PATH.exists():
+        return []
+    records = [json.loads(l) for l in TRIALS_PATH.read_text(encoding="utf-8").splitlines() if l.strip()]
+    ids = {r["id"] for r in records}
+    for r in records:
+        title, desc, body, meta = render_trial(r, ids)
+        write(out, f"trials/{r['id']}.html", page(title, desc, body, f"trials/{r['id']}.html", meta["jsonld"], depth=1))
+        urls.append(f"trials/{r['id']}.html")
+    by_kind = defaultdict(list)
+    for r in records:
+        by_kind[r.get("kind")].append(r)
+    n_completed = sum(1 for r in records if r.get("status") == "completed")
+    n_ongoing = sum(1 for r in records if r.get("status") == "ongoing")
+    body = ["<h1>Canine aging trial registry</h1>",
+            f"<p class=\"lede\">{len(records)} interventional studies and cohorts on aging in dogs ({n_completed} completed, {n_ongoing} ongoing): "
+            "lifespan and healthspan trials, cognitive-aging and mobility trials in senior dogs, immunosenescence and organ-decline "
+            "interventions, lifetime cohorts and company regulatory programs. Each record is typed and every field is backed by a "
+            "verbatim quote from its source; veterinary trials have no ClinicalTrials.gov, so this is the only such registry.</p>"]
+    order = ["randomized_controlled_trial", "controlled_trial", "crossover_trial", "single_arm_trial", "pilot_study", "regulatory_program", "longitudinal_cohort"]
+    for kind in order + [k for k in by_kind if k not in order]:
+        rows = by_kind.get(kind)
+        if not rows:
+            continue
+        body.append(f"<h2>{esc(KIND_LABEL.get(kind, kind)).capitalize()}s</h2>")
+        body.append("<table><thead><tr><th>Study</th><th>Intervention</th><th>Dogs</th><th>Status</th><th>Years</th><th>Result (as reported)</th></tr></thead><tbody>")
+        for r in sorted(rows, key=lambda x: (x.get("start_year") or x.get("end_year") or 0, x["name"])):
+            pop = r.get("population") or {}
+            years = "–".join(str(y) for y in (r.get("start_year"), r.get("end_year")) if y) if (r.get("start_year") or r.get("end_year")) else ""
+            body.append(f'<tr><td><a href="{esc(r["id"])}.html">{esc(r["name"])}</a></td><td>{esc(r.get("intervention") or "")}</td>'
+                        f'<td>{pop.get("n") or ""}</td><td>{esc(r.get("status"))}</td><td>{esc(years)}</td><td>{esc((r.get("result") or "")[:220])}</td></tr>')
+        body.append("</tbody></table>")
+    write(out, "trials/index.html", page("Canine aging trial registry",
+                                         f"Registry of {len(records)} interventional studies and cohorts on aging in dogs, each typed and backed by verbatim source quotes.",
+                                         "\n".join(body), "trials/index.html", depth=1))
+    urls.append("trials/index.html")
+    return records
+
+
+def trials_for_compound(records: list[dict], names: list[str]) -> list[dict]:
+    keys = [n.lower() for n in names if n]
+    out = []
+    for r in records:
+        hay = " ".join(str(x) for x in (r.get("name"), r.get("intervention"), " ".join(r.get("tags") or []))).lower()
+        if any(k in hay for k in keys):
+            out.append(r)
+    return out
+
+
 # ------------------------------------------------------------------ site
 
 CSS = """
@@ -365,13 +474,16 @@ def build(db: Path, out: Path) -> dict:
                                           "\n".join(body), "fda-foi/index.html", depth=1))
     urls.append("fda-foi/index.html")
 
+    # Trial registry pages
+    trial_records = build_trials(out, urls)
+
     # Intervention pages: every ITP compound + veterinary comparators
     itp = [r[0] for r in conn.execute("SELECT DISTINCT compound_name FROM drugage WHERE itp='Yes' ORDER BY 1")]
     compounds = list(dict.fromkeys(itp + VET_COMPARATORS))
     inter_index = []
     for c in compounds:
         slug = slugify(c)
-        title, desc, r = render_intervention(conn, c, ingredient_slugs)
+        title, desc, r = render_intervention(conn, c, ingredient_slugs, trial_records)
         write(out, f"interventions/{slug}.html", page(title, desc, r["html"], f"interventions/{slug}.html", r["jsonld"], depth=1))
         inter_index.append((c, slug, r))
         urls.append(f"interventions/{slug}.html")
@@ -401,6 +513,7 @@ def build(db: Path, out: Path) -> dict:
 <h2>Sections</h2>
 <ul>
 <li><a href="interventions/index.html">Interventions</a>: for every compound the NIA Interventions Testing Program tested in mice ({n_itp_compounds}) plus veterinary comparators, the dog evidence and the gaps. {n_with_dog} of {n_itp_compounds} {'has' if n_with_dog == 1 else 'have'} a dog lifespan experiment on record.</li>
+<li><a href="trials/index.html">Canine aging trial registry</a>: {len(trial_records)} interventional studies and cohorts on aging in dogs, typed and quote-backed, including the company programs that have no publication.</li>
 <li><a href="fda-foi/index.html">FDA FOI summaries by ingredient</a>: {len(foi_index)} active ingredients, {n_foi} summaries for dog products, as typed records of dose, pharmacokinetics, target-animal safety, effectiveness and adverse reactions with verbatim quotes. The only public, regulator-reviewed source of canine PK and safety-margin data.</li>
 </ul>
 <h2>Sources and tools</h2>
@@ -420,20 +533,23 @@ def build(db: Path, out: Path) -> dict:
     llms = ["# Canine geroscience evidence", "",
             "> Source-linked, model-free evidence pages on aging research in companion dogs, generated from the dog-geroscience-mcp database. Every figure is shown with its verbatim quote and identifier (PMID, foi_id, NADA). Text CC BY 4.0; data per source.", "",
             "## Sections", f"- [Interventions]({BASE_URL}/interventions/index.html): the dog evidence for every NIA ITP compound",
-            f"- [FDA FOI summaries by ingredient]({BASE_URL}/fda-foi/index.html): dose, PK, safety and effectiveness data from FDA CVM reviews of dog products", "",
-            "## Interventions"]
+            f"- [FDA FOI summaries by ingredient]({BASE_URL}/fda-foi/index.html): dose, PK, safety and effectiveness data from FDA CVM reviews of dog products",
+            f"- [Canine aging trial registry]({BASE_URL}/trials/index.html): interventional studies and cohorts on aging in dogs, typed and quote-backed", "",
+            "## Trials and cohorts"]
+    llms += [f"- [{r['name']}]({BASE_URL}/trials/{r['id']}.html): {KIND_LABEL.get(r.get('kind'), r.get('kind'))}, {r.get('status')}" for r in trial_records]
+    llms += ["", "## Interventions"]
     llms += [f"- [{c}]({BASE_URL}/interventions/{slug}.html): {r['n_itp']} ITP rows, {r['n_dog']} dog lifespan rows, {r['n_corpus']} canine papers, {r['n_foi']} FDA FOI summaries" for c, slug, r in inter_index]
     llms += ["", "## FDA FOI summaries by ingredient"]
     llms += [f"- [{name}]({BASE_URL}/fda-foi/{slug}.html): {meta['n_records']} summaries, {meta['n_pk']} PK values, {meta['n_ar']} adverse-reaction rows" for name, slug, meta in foi_index]
     llms += ["", "## Data and tools", f"- [canine-aging-corpus]({HF}/canine-aging-corpus)", f"- [foi-summaries-dog]({HF}/foi-summaries-dog)",
-             f"- [dog-geroscience-mcp-data]({HF}/dog-geroscience-mcp-data)", f"- [canine-geroscience-questions]({HF}/canine-geroscience-questions)",
+             f"- [dog-geroscience-mcp-data]({HF}/dog-geroscience-mcp-data)", f"- [canine-trial-registry]({HF}/canine-trial-registry)", f"- [canine-geroscience-questions]({HF}/canine-geroscience-questions)",
              f"- [dog-geroscience-mcp source]({REPO}/tree/main/mcp)"]
     write(out, "llms.txt", "\n".join(llms) + "\n")
     today = BUILD_DATE
     write(out, "sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
           + "".join(f"<url><loc>{BASE_URL}/{u}</loc><lastmod>{today}</lastmod></url>\n" for u in urls) + "</urlset>\n")
     write(out, "robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}/sitemap.xml\n")
-    return {"pages": len(urls), "interventions": len(inter_index), "ingredients": len(foi_index), "foi_records": len(rows),
+    return {"pages": len(urls), "interventions": len(inter_index), "ingredients": len(foi_index), "foi_records": len(rows), "trials": len(trial_records),
             "itp_compounds": n_itp_compounds, "with_dog_rows": n_with_dog, "with_corpus_mentions": n_with_corpus,
             "db_built_at": info.get("built_at")}
 

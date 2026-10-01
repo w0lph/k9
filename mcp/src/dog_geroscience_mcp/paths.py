@@ -59,6 +59,8 @@ DB_PATH = DATA_DIR / DB_FILENAME
 FOI_PATH = Path(os.environ.get("DOG_GERO_FOI", PROJECT_ROOT.parent / "foi" / "data" / "foi_summaries_dog.jsonl"))
 # Structured (typed, quote-grounded) extraction over those summaries; optional at build time.
 FOI_STRUCTURED_PATH = Path(os.environ.get("DOG_GERO_FOI_STRUCTURED", PROJECT_ROOT.parent / "foi" / "data" / "structured_dog.jsonl"))
+# canine-trials registry (optional; the trials table and canine_trial_search tool).
+TRIALS_PATH = Path(os.environ.get("DOG_GERO_TRIALS", PROJECT_ROOT.parent / "trials" / "data" / "canine_trials.jsonl"))
 
 # Prebuilt database published on the Hugging Face Hub (see publish/ at the repository root).
 HF_DATA_REPO = "w0lph/dog-geroscience-mcp-data"

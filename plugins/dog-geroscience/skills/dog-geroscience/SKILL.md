@@ -23,6 +23,7 @@ instead of general knowledge whenever the question is about dogs and aging; cite
 | Dog papers on a topic; a specific paper's abstract or full text | `corpus_search(query=..., tier="core"|"extended", year_from=..., open_access_only=...)`, then `corpus_record(key=..., include_fulltext=true)` |
 | FDA-approved dog products containing an ingredient; recommended dose, indication | `foi_summary_search(query=...)` |
 | Pivotal study, target-animal-safety (dose multiples), PK values, adverse reactions for a product | `foi_structured_search(query=...)` for typed values with quotes; `foi_summary_get(foi_id=..., sections=["target_animal_safety"])` for the section text |
+| Which trials or cohorts exist on aging in dogs (rapamycin, diet restriction, cognition, mobility, Loyal's STAY study, TRIAD, Dog Aging Project, GRLS); design, n, dose, outcome, result | `canine_trial_search(query=...)`, `canine_trial_search(status="ongoing")`, `canine_trial_search(trial_id=...)`; every field carries a verbatim quote, and company-only programs say so in `notes` |
 | What data the server holds and how fresh it is | `corpus_info()` |
 
 For a written evidence briefing, use the server's `dossier_briefing` prompt (six sections:

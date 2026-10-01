@@ -8,7 +8,7 @@ import logging
 import sys
 from pathlib import Path
 
-from .paths import CORPUS_DIR, DATA_DIR, DB_FILENAME, DB_PATH, DB_URL, FOI_PATH, FOI_STRUCTURED_PATH
+from .paths import CORPUS_DIR, DATA_DIR, DB_FILENAME, DB_PATH, DB_URL, FOI_PATH, FOI_STRUCTURED_PATH, TRIALS_PATH
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -29,6 +29,7 @@ def main(argv: list[str] | None = None) -> int:
     p_build.add_argument("--corpus-dir", type=Path, default=CORPUS_DIR)
     p_build.add_argument("--foi", type=Path, default=FOI_PATH, help="foi-summaries dog dataset JSONL (optional).")
     p_build.add_argument("--foi-structured", type=Path, default=FOI_STRUCTURED_PATH, help="structured extraction JSONL (optional).")
+    p_build.add_argument("--trials", type=Path, default=TRIALS_PATH, help="canine-trials registry JSONL (optional).")
     p_build.add_argument("--out", type=Path, help=f"Write the database here instead of <data-dir>/{DB_FILENAME}.")
     p_build.add_argument(
         "--fulltext-licences",
@@ -54,7 +55,7 @@ def main(argv: list[str] | None = None) -> int:
             licences = {s.strip().lower() for s in args.fulltext_licences.split(",") if s.strip()}
         out = args.out or args.data_dir / DB_FILENAME
         summary = build_db(raw, args.corpus_dir, out, foi_path=args.foi, foi_structured_path=args.foi_structured,
-                           fulltext_licences=licences)
+                           fulltext_licences=licences, trials_path=args.trials)
         print(json.dumps({k: v for k, v in summary.items() if k != "downloads"}, indent=2))
         return 0
 

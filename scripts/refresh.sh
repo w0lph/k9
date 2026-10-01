@@ -13,7 +13,8 @@
 #                drafts. If the FDA site is unreachable, fall back to the published dataset so
 #                the rest of the refresh still happens.
 #   3. mcp/      download HAGR and Dog Aging Project sources, build the database, run the tests
-#   4. publish/  stage the Hub repositories (corpus, foi, mcp-data); the upload itself is a
+#   3b. trials/  validate the canine trial registry (verbatim quotes) against the fresh corpus
+#   4. publish/  stage the Hub repositories (corpus, foi, trials, mcp-data); the upload itself is a
 #                separate step that needs a token (see the workflow)
 #   5. docs/     regenerate the static evidence site
 #
@@ -31,7 +32,7 @@ CORPUS_MIN_FRACTION="${CORPUS_MIN_FRACTION:-0.95}"
 REFRESH_FOI="${REFRESH_FOI:-1}"
 export PYTHONIOENCODING=utf-8
 SUMMARY="$ROOT/refresh_summary.json"
-STAGE_ONLY="corpus,mcp-data"
+STAGE_ONLY="corpus,trials,mcp-data"
 
 step() { printf '\n=== %s ===\n' "$*"; }
 jsonget() { python3 -c 'import json,sys; d=json.load(open(sys.argv[1])); print(d[sys.argv[2]] if sys.argv[2] in d else "")' "$1" "$2"; }
@@ -114,6 +115,13 @@ uv sync --quiet
 mkdir -p data
 uv run dog-geroscience-mcp build | tee data/build_stdout.json
 uv run pytest -q
+
+# ----------------------------------------------------------------------------- 3b. trials
+step "trials: validate the registry against the fresh database"
+cd "$ROOT/trials"
+uv sync --quiet
+uv run ct validate data/canine_trials.jsonl
+uv run ct export
 
 # ----------------------------------------------------------------------------- 4. stage
 step "publish: stage Hub repositories ($STAGE_ONLY)"
