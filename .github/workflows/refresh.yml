@@ -1,0 +1,77 @@
+name: Monthly refresh
+
+# Rebuilds every derived artefact from the public sources (scripts/refresh.sh), publishes the
+# datasets and the server database to the Hugging Face Hub, and commits the regenerated
+# evidence site. Needs one repository secret, HF_TOKEN (a Hub token with write access to the
+# dataset repositories); without it the run still rebuilds and commits the site and only the
+# upload is skipped.
+
+on:
+  schedule:
+    - cron: "17 5 3 * *"   # 05:17 UTC on the 3rd of every month
+  workflow_dispatch:
+    inputs:
+      upload:
+        description: "Upload the staged datasets to the Hub"
+        type: boolean
+        default: true
+      refresh_foi:
+        description: "Re-run the FDA FOI pipeline (otherwise reuse the published dataset)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      HF_OWNER: w0lph
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      UV_PYTHON: "3.12"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: "**/uv.lock"
+
+      - name: Rebuild corpus, FOI dataset, database and site
+        env:
+          REFRESH_FOI: ${{ github.event_name == 'workflow_dispatch' && inputs.refresh_foi == false && '0' || '1' }}
+        run: bash scripts/refresh.sh
+
+      - name: Job summary
+        if: always()
+        run: |
+          if [ -f refresh_summary.json ]; then
+            { echo '```json'; cat refresh_summary.json; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload datasets to the Hugging Face Hub
+        if: env.HF_TOKEN != '' && (github.event_name != 'workflow_dispatch' || inputs.upload)
+        run: |
+          for name in $(python3 -c 'import json; print(" ".join({"corpus": "canine-aging-corpus", "foi": "foi-summaries-dog", "mcp-data": "dog-geroscience-mcp-data"}[s] for s in json.load(open("refresh_summary.json"))["staged"]))'); do
+            echo "uploading $name"
+            uvx --from huggingface_hub hf upload "$HF_OWNER/$name" "publish/stage/$name" . --repo-type dataset --commit-message "Monthly refresh $(date -u +%Y-%m-%d)"
+          done
+
+      - name: Commit the regenerated site and FOI index
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git add -u foi/data
+          if git diff --cached --quiet; then
+            echo "nothing changed"
+          else
+            git commit -m "refresh: $(date -u +%Y-%m-%d) corpus, FOI index and evidence site" -m "Automated monthly rebuild (scripts/refresh.sh)."
+            git push
+          fi

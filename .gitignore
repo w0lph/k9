@@ -30,3 +30,6 @@ upstream/
 
 # uv lockfile created when running the extension bundle locally
 mcp/mcpb/uv.lock
+
+# Output of scripts/refresh.sh
+refresh_summary.json

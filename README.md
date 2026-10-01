@@ -20,7 +20,9 @@ Phase 2 components:
 
 | [docs/](https://w0lph.github.io/k9/) | Static evidence site generated from the database by `mcp/scripts/build_site.py`: one page per NIA ITP compound and veterinary comparator (DrugAge rows, dog-equivalent doses, canine literature, FDA FOI summaries, gaps) and one per FOI ingredient (dose regimen, PK, target-animal safety, effectiveness, adverse reactions, each with its verbatim quote), plus `llms.txt` and a sitemap. No model-written text. | Live at https://w0lph.github.io/k9/ (219 pages); rebuild with `cd mcp && uv run python scripts/build_site.py`. |
 
-`.\rebuild.ps1` regenerates everything in dependency order (`-Fresh` re-fetches sources).
+`.\rebuild.ps1` regenerates everything in dependency order (`-Fresh` re-fetches sources);
+`scripts/refresh.sh` is the same from a clean checkout and is what the monthly GitHub Actions
+workflow runs to republish the datasets, the database and the site.
 [PUBLISHING.md](PUBLISHING.md) is the step-by-step for the Hugging Face Hub (dataset cards and
 staging script in `publish/`), PyPI and the MCP registry (`mcp/server.json`), and Glama
 (`glama.json`, root `Dockerfile`). The server installs with

@@ -169,6 +169,32 @@ Pages serves `main:/docs` (enabled once with
 `gh api -X POST repos/w0lph/k9/pages -f build_type=legacy -f "source[branch]=main" -f "source[path]=/docs"`);
 each push to `main` redeploys within a minute or two. Rebuild after every database rebuild.
 
+## 4c. Monthly refresh (GitHub Actions)
+
+`.github/workflows/refresh.yml` runs `scripts/refresh.sh` on the 3rd of every month (and on
+demand from the Actions tab): fresh Europe PMC metadata and full text, the FDA FOI pipeline
+(falling back to the published dataset if the FDA site is unreachable), the HAGR and Dog
+Aging Project downloads, the database build and tests, the Hub staging, and the evidence
+site. It then uploads the staged datasets to the Hub and commits `docs/` plus the FOI index
+files. Guards abort the run instead of publishing a truncated corpus (below 95% of the
+published record count) or a smaller FOI dataset.
+
+One secret is needed for the upload step, set once from a terminal where `gh` is logged in
+(paste the token at the prompt; it is a Hub token with write access to the datasets):
+
+```bash
+gh secret set HF_TOKEN --repo w0lph/k9
+```
+
+Without the secret the workflow still rebuilds and commits the site; only the upload is
+skipped. The structured FOI extraction is not automated (it needs a model): new FOI
+summaries arrive as unstructured records until the next manual extraction pass
+(`foi/README.md`). Installed servers keep the database they downloaded; `uvx
+dog-geroscience-mcp fetch-data --force` picks up the latest one.
+
+The same script runs locally (`bash scripts/refresh.sh`) and is what `.\rebuild.ps1 -Fresh`
+does on Windows, plus the staging and site steps.
+
 ## 5. The write-up
 
 The plan's deliverable includes a short post showing five real questions answered with
